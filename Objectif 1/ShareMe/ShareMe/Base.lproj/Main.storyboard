@@ -42,10 +42,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="UnO-md-UXC"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2X-Hu-D80" userLabel="errorLabel">
+                                <rect key="frame" x="187.5" y="343" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.58895358580000001" green="0.58895358580000001" blue="0.58895358580000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,15 +60,18 @@
                             <constraint firstItem="FhP-US-iPM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S0V-F9-7DT"/>
                             <constraint firstItem="FhP-US-iPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5W-jW-doh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Zr-Zr-4im" secondAttribute="trailing" constant="16" id="aaC-nj-Q5g"/>
+                            <constraint firstItem="W2X-Hu-D80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehu-hI-ae6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yIY-u8-Lug" secondAttribute="trailing" constant="16" id="h7q-R8-2sR"/>
                             <constraint firstItem="yIY-u8-Lug" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lHc-qT-ZuT"/>
                             <constraint firstItem="yIY-u8-Lug" firstAttribute="top" secondItem="6Zr-Zr-4im" secondAttribute="bottom" constant="8" id="nMt-pR-jf6"/>
                             <constraint firstItem="vbG-Vb-ien" firstAttribute="top" secondItem="yIY-u8-Lug" secondAttribute="bottom" constant="22" id="niy-WO-uZu"/>
+                            <constraint firstItem="W2X-Hu-D80" firstAttribute="top" secondItem="vbG-Vb-ien" secondAttribute="bottom" constant="8" id="okb-8F-bJj"/>
                             <constraint firstItem="vbG-Vb-ien" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rmc-xe-hrk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ui_errorLabel" destination="W2X-Hu-D80" id="8tT-hm-BMS"/>
                         <outlet property="ui_shareTextView" destination="yIY-u8-Lug" id="0bl-9S-gce"/>
                     </connections>
                 </viewController>
