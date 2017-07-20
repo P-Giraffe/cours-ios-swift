@@ -6,6 +6,8 @@
         <page name='Fil_execution'/>
         <page name='Fonctions'/>
         <page name='Variables'/>
+        <page name='Tableaux'/>
         <page name='classes_objets'/>
+        <page name='Optionnels'/>
     </pages>
 </playground>

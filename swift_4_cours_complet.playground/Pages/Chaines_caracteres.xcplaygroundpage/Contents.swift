@@ -1,4 +1,3 @@
-//: [Variables](@previous)
 /*:
  # Chaînes de caractères
  ---
@@ -13,4 +12,4 @@ fullname = firstname + " " + lastname
 fullname = "\(firstname) \(lastname)"
 
 
-//: [Conditions](@next)
+//: [Conditions >](@next)

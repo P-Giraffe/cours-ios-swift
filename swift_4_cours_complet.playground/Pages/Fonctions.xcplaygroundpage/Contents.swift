@@ -1,4 +1,4 @@
-//: [Conditions](@previous)
+//: [< Fil d'exécution](@previous)
 /*:
  # Fonctions
  ---
@@ -36,3 +36,4 @@ calculResultat(nb1: 5, nb2: 8, operateur: "+")
 demarrerCalculatrice()
 demarrerCalculatrice()
 
+//: [Variables >](@next)

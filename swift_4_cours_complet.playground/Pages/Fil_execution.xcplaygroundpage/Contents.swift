@@ -1,4 +1,9 @@
-//: Playground - noun: a place where people can play
+//: [< Conditions](@previous)
+/*:
+ # Fil d'exécution
+ ---
+ ### Maxime Britto - Swift 4
+ */
 
 var textVariable = "Coucou"
 print(textVariable)
@@ -12,4 +17,4 @@ if textVariable.count > 0 {
 for letter in textVariable {
     print("Lettre : \(letter)")
 }
-//: [Variables](@next)
+//: [Fonctions >](@next)

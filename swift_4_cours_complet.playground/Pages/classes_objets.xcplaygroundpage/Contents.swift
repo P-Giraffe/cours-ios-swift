@@ -1,4 +1,4 @@
-//: [< Variables](@previous)
+//: [< Tableaux](@previous)
 /*:
  # Classes et Objets
  ---
@@ -36,3 +36,6 @@ player1.gameWon()
 player1.gameWon()
 player2.gameWon()
 player1.gameLost()
+
+
+//: [Optionnels >](@next)

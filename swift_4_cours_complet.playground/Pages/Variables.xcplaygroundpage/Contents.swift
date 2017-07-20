@@ -1,4 +1,4 @@
-//: [Fil d'exécution](@previous)
+//: [< Fonctions](@previous)
 /*:
  # Variables
  ---
@@ -32,4 +32,4 @@ var nombreReel = 20.5
 
 let PI = 3.14
 
-//: [Chaînes de caractères](@next)
+//: [Tableaux >](@next)

@@ -25,4 +25,4 @@ if operateur == "+" {
 }
 print("\(premierNombre) \(operateur) \(secondNombre) = \(resultat)")
 
-//: [Fonctions](@next)
+//: [Fil d'exécution >](@next)
