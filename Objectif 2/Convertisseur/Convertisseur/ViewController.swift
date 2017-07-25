@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var ui_inputValueType: UISegmentedControl!
     @IBOutlet weak var ui_inputValueField: UITextField!
     
-    
     @IBOutlet weak var ui_outputMeterLabel: UILabel!
     @IBOutlet weak var ui_outputCentimeterLabel: UILabel!
     @IBOutlet weak var ui_outputInchesLabel: UILabel!
@@ -22,9 +21,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func inputValueTypeChanged() {
+    
+    func convertInputValue() {
+        if let inputString:String = ui_inputValueField.text,
+            let inputDouble:Double = Double(inputString) {
+            
+        }
+     
     }
+    
+    @IBAction func inputValueTypeChanged() {
+        convertInputValue()
+    }
+    
     @IBAction func inputValueChanged() {
+        convertInputValue()
     }
     
     override func didReceiveMemoryWarning() {
