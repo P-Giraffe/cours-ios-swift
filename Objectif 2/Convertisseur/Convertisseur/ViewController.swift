@@ -36,6 +36,14 @@ class ViewController: UIViewController {
             default:
                 inputMeters = 0
             }
+            
+            ui_outputMeterLabel.text = "\(inputMeters) m"
+            ui_outputInchesLabel.text = "\(UnitLength.inches.converter.value(fromBaseUnitValue: inputMeters)) pouces"
+            ui_outputCentimeterLabel.text = "\(UnitLength.centimeters.converter.value(fromBaseUnitValue: inputMeters)) cm"
+        } else {
+            ui_outputCentimeterLabel.text = nil
+            ui_outputInchesLabel.text = nil
+            ui_outputMeterLabel.text = nil
         }
      
     }
