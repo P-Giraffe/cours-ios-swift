@@ -25,7 +25,17 @@ class ViewController: UIViewController {
     func convertInputValue() {
         if let inputString:String = ui_inputValueField.text,
             let inputDouble:Double = Double(inputString) {
-            
+            let inputMeters:Double
+            switch ui_inputValueType.selectedSegmentIndex {
+            case 0: //m
+                inputMeters = inputDouble
+            case 1: //cm
+                inputMeters = UnitLength.centimeters.converter.baseUnitValue(fromValue: inputDouble)
+            case 2: //inches
+                inputMeters = UnitLength.inches.converter.baseUnitValue(fromValue: inputDouble)
+            default:
+                inputMeters = 0
+            }
         }
      
     }
