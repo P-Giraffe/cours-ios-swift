@@ -22,10 +22,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func convertInputValue() {
+    func getInputMeterValue() -> Double? {
+        let inputMeters:Double?
         if let inputString:String = ui_inputValueField.text,
             let inputDouble:Double = Double(inputString) {
-            let inputMeters:Double
             switch ui_inputValueType.selectedSegmentIndex {
             case 0: //m
                 inputMeters = inputDouble
@@ -34,9 +34,17 @@ class ViewController: UIViewController {
             case 2: //inches
                 inputMeters = UnitLength.inches.converter.baseUnitValue(fromValue: inputDouble)
             default:
-                inputMeters = 0
+                inputMeters = nil
             }
-            
+        } else {
+            inputMeters = nil
+        }
+        
+        return inputMeters
+    }
+    
+    func convertInputValue() {
+        if let inputMeters:Double = getInputMeterValue() {
             ui_outputMeterLabel.text = "\(inputMeters) m"
             ui_outputInchesLabel.text = "\(UnitLength.inches.converter.value(fromBaseUnitValue: inputMeters)) pouces"
             ui_outputCentimeterLabel.text = "\(UnitLength.centimeters.converter.value(fromBaseUnitValue: inputMeters)) cm"
@@ -45,7 +53,6 @@ class ViewController: UIViewController {
             ui_outputInchesLabel.text = nil
             ui_outputMeterLabel.text = nil
         }
-     
     }
     
     @IBAction func inputValueTypeChanged() {
