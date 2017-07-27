@@ -31,6 +31,7 @@ print("\(premierNombre) \(operateur) \(secondNombre) = \(resultat)")
 switch operateur {
 case "+":
     resultat = premierNombre + secondNombre
+    fallthrough
 case "-":
     resultat = premierNombre - secondNombre
 case "/":

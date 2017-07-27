@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,17 +14,20 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5d-d4-GvY">
-                                <rect key="frame" x="113.5" y="273.5" width="93.5" height="21"/>
+                                <rect key="frame" x="130" y="273.5" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="tq4-Wa-fYb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-n3-7UZ" userLabel="Calque1">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eL7-n3-7UZ" userLabel="Calque1">
                                 <rect key="frame" x="16" y="77" width="120" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sous texte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETM-WO-dZW">
@@ -51,7 +54,9 @@
                         <constraints>
                             <constraint firstItem="eL7-n3-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="22y-IW-XVM"/>
                             <constraint firstItem="L5d-d4-GvY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lhd-ig-z1Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L5d-d4-GvY" secondAttribute="trailing" constant="130" id="Po0-yt-QPT"/>
                             <constraint firstItem="jaM-va-KgU" firstAttribute="leading" secondItem="eL7-n3-7UZ" secondAttribute="trailing" constant="50" id="S9Y-06-qxv"/>
+                            <constraint firstItem="L5d-d4-GvY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="Ty0-re-zhj"/>
                             <constraint firstItem="L5d-d4-GvY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gat-2m-kqJ"/>
                             <constraint firstItem="eL7-n3-7UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="u3x-70-gYd"/>
                             <constraint firstItem="jaM-va-KgU" firstAttribute="centerY" secondItem="eL7-n3-7UZ" secondAttribute="centerY" id="yBX-Ef-LCw"/>
