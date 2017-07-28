@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 500
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "number-cell", for: indexPath)
+        
+        if let titleLabel = cell.textLabel {
+            titleLabel.text = "Cellule \(indexPath.row)"
+        }
+        
+        return cell
     }
     
 
