@@ -10,7 +10,8 @@ import UIKit
 import Foundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    let _goalManager = GoalManager()
+    
     @IBOutlet weak var ui_newGoalTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
