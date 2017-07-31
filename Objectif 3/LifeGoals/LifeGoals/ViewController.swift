@@ -23,11 +23,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        textField.resignFirstResponder()
+        return false
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        
+        textField.resignFirstResponder()
+        return true
     }
 
 
