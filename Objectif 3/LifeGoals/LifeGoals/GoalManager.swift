@@ -8,10 +8,15 @@
 
 import Foundation
 class GoalManager {
+    private let GOAL_LIST_KEY = "GoalList"
     private var _goalList:[String]
     
     init() {
-        _goalList = []
+        if let loadedGoalList = UserDefaults.standard.array(forKey: GOAL_LIST_KEY) as? [String] {
+            _goalList = loadedGoalList
+        } else {
+            _goalList = []
+        }
     }
     
     func getGoalCount() -> Int {
@@ -27,6 +32,7 @@ class GoalManager {
         if text.count > 0 {
             _goalList.append(text)
             newIndex = _goalList.count - 1
+            UserDefaults.standard.set(_goalList, forKey: GOAL_LIST_KEY)
         } else {
             newIndex = nil
         }
@@ -35,5 +41,6 @@ class GoalManager {
     
     func removeGoal(atIndex index:Int) {
         _goalList.remove(at: index)
+        UserDefaults.standard.set(_goalList, forKey: GOAL_LIST_KEY)
     }
 }
