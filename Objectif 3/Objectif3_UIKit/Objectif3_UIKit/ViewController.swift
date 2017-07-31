@@ -78,5 +78,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            _70sShowList.remove(at: indexPath.row)
+        } else {
+            _friendsList.remove(at: indexPath.row)
+        }
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
 }
 
