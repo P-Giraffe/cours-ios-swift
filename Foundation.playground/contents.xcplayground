@@ -3,5 +3,6 @@
     <pages>
         <page name='Sommaire'/>
         <page name='Convert_units'/>
+        <page name='UserDefaults'/>
     </pages>
 </playground>

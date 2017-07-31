@@ -4,7 +4,7 @@
  ---
  ### Maxime Britto - Swift 4
  ---
-[Documentation officielle Apple](https://developer.apple.com/documentation/foundation/units_and_measurement?language=objc)
+[Documentation officielle Apple](https://developer.apple.com/documentation/foundation/units_and_measurement)
   */
 import Foundation
 
