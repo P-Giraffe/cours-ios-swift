@@ -4,7 +4,7 @@
  ---
  ### Maxime Britto - Swift 4
  */
-func calculResultat(nb1:Double, nb2:Double, operateur:String) -> Double {
+func calculResultat(duNombre nb1:Double,avecLeNombre nb2:Double,_ operateur:String) -> Double {
     let resultat : Double
     if operateur == "+" {
         resultat = nb1 + nb2
@@ -23,6 +23,9 @@ func calculResultat(nb1:Double, nb2:Double, operateur:String) -> Double {
     
     return resultat
 }
+calculResultat(duNombre: 5, avecLeNombre: 3, "+")
+
+
 func demarrerCalculatrice() {
     let premierNombre : Double = 2
     let secondNombre : Double = 5
