@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -28,8 +29,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        textField.text = nil
         textField.resignFirstResponder()
-        return true
+        return false
     }
 
 

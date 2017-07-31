@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-J3-bgP">
-                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LifeGoals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycc-e7-yhn">
-                                <rect key="frame" x="134.5" y="0.0" width="105.5" height="31.5"/>
+                                <rect key="frame" x="134.5" y="40" width="105.5" height="31.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XaA-ta-Mhi">
-                                <rect key="frame" x="16" y="37" width="343" height="30"/>
+                                <rect key="frame" x="16" y="77" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
@@ -42,7 +42,7 @@
                             <constraint firstItem="t4N-J3-bgP" firstAttribute="top" secondItem="XaA-ta-Mhi" secondAttribute="bottom" constant="8" symbolic="YES" id="CR8-md-xdK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t4N-J3-bgP" secondAttribute="trailing" id="K9t-SW-xXg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t4N-J3-bgP" secondAttribute="bottom" id="a0D-Bs-ySE"/>
-                            <constraint firstItem="Ycc-e7-yhn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="et0-5T-Q6X"/>
+                            <constraint firstItem="Ycc-e7-yhn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="et0-5T-Q6X"/>
                             <constraint firstItem="XaA-ta-Mhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gDz-xB-Kh5"/>
                             <constraint firstItem="XaA-ta-Mhi" firstAttribute="top" secondItem="Ycc-e7-yhn" secondAttribute="bottom" constant="5.5" id="ubc-Lo-fGX"/>
                         </constraints>
