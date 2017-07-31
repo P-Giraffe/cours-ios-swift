@@ -28,6 +28,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let goalText = ui_newGoalTextField.text,
+           let goalIndex = _goalManager.addGoal(withText: goalText) {
+            ui_goalsTableView.insertRows(at: [IndexPath(row: goalIndex, section: 0)], with: .automatic)
+            ui_newGoalTextField.text = nil
+        }
         textField.resignFirstResponder()
         return false
     }
