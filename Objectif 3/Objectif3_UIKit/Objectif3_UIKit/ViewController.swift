@@ -14,9 +14,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     var _70sShowList:[String] = []
     var _friendsList:[String] = []
     
+    @IBOutlet weak var ui_demoTextField: UITextField!
+    @IBAction func dissmissKeyboard() {
+        ui_demoTextField.resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        ui_demoTextField.becomeFirstResponder()
+        
         ui_tableView.dataSource = self
         _70sShowList.append("Donna")
         _70sShowList.append("Eric")
