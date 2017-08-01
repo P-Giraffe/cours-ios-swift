@@ -50,7 +50,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "goal-cell", for: indexPath)
         
-        cell.textLabel?.text = _goalManager.getGoal(atIndex: indexPath.row)
+        let goal = _goalManager.getGoal(atIndex: indexPath.row)
+        cell.textLabel?.text = goal.title
         
         return cell
     }
