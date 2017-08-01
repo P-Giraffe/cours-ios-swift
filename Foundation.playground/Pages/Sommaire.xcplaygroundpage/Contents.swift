@@ -7,5 +7,6 @@
  * [Conversion d'unités](Convert_units)
  * [Préférences utilisateur (UserDefaults)](UserDefaults)
  * [NSString](NSString)
+ * [NSRange](NSRange)
  */
 

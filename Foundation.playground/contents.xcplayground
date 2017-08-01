@@ -5,5 +5,6 @@
         <page name='Convert_units'/>
         <page name='UserDefaults'/>
         <page name='NSString'/>
+        <page name='NSRange'/>
     </pages>
 </playground>
