@@ -6,5 +6,6 @@
         <page name='UserDefaults'/>
         <page name='NSString'/>
         <page name='NSRange'/>
+        <page name='NSLinguisticTagger'/>
     </pages>
 </playground>

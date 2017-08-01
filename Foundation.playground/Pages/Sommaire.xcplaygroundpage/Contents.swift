@@ -8,5 +8,6 @@
  * [Préférences utilisateur (UserDefaults)](UserDefaults)
  * [NSString](NSString)
  * [NSRange](NSRange)
+ * [Analyse du langage naturel](NSLinguisticTagger)
  */
 
