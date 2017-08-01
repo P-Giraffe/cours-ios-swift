@@ -52,6 +52,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDataSour
         
         let goal = _goalManager.getGoal(atIndex: indexPath.row)
         cell.textLabel?.text = goal.title
+        cell.detailTextLabel?.text = goal.category
         
         return cell
     }

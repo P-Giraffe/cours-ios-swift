@@ -10,9 +10,25 @@ import Foundation
 
 class Goal {
     let title:String
-    let category:String? = nil
+    var category:String? = nil
     
     init(newTitle:String) {
         title = newTitle
+        processGoal()
     }
+    
+    private func processGoal() {
+        let tagger = NSLinguisticTagger(tagSchemes: [.lexicalClass], options: 0)
+        tagger.string = title
+        let range = NSRange(location: 0, length: title.count)
+        
+        tagger.enumerateTags(in: range, scheme: .lexicalClass, options: [.omitPunctuation, .omitWhitespace]) { (tagOpt, tokenRange, _, _) in
+            if let tag:NSLinguisticTag = tagOpt,
+                tag == .verb {
+                let verb = (title as NSString).substring(with: tokenRange)
+                category = verb
+            }
+        }
+    }
+    
 }
