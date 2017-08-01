@@ -4,5 +4,6 @@
         <page name='Sommaire'/>
         <page name='Convert_units'/>
         <page name='UserDefaults'/>
+        <page name='NSString'/>
     </pages>
 </playground>
