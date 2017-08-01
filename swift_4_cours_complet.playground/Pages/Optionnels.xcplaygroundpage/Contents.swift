@@ -25,3 +25,23 @@ if let age = ageOpt {
     print("Aucun âge fourni")
 }
 
+//: ### Optionnels : valeurs par défaut
+
+let noteStr = "d15"
+let noteOpt:Double? = Double(noteStr)
+print("Note obtenue : ")
+if let note = noteOpt {
+    print(note)
+} else {
+    print(0.0)
+}
+print(noteOpt ?? 0.0)
+let noteFinale = noteOpt ?? 0.0
+
+
+
+
+
+
+
+
