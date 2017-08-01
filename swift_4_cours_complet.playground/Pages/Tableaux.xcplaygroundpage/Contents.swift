@@ -1,4 +1,4 @@
-//: [< Variables](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Tableaux
  ---

@@ -1,3 +1,4 @@
+//: [< Sommaire](Sommaire)
 /*:
  # Chaînes de caractères
  ---

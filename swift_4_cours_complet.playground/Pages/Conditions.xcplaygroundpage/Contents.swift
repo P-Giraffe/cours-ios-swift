@@ -1,4 +1,4 @@
-//: [< Chaînes de caractères](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Conditions
  ---

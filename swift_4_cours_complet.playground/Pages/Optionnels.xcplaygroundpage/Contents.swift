@@ -1,4 +1,4 @@
-//: [< Classes et objets](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Optionnels
  ---

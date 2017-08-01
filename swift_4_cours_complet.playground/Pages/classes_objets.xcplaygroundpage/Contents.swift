@@ -1,4 +1,4 @@
-//: [< Tableaux](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Classes et Objets
  ---

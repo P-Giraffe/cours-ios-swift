@@ -1,4 +1,4 @@
-//: [< Fonctions](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Variables
  ---

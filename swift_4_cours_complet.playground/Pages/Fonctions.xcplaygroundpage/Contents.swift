@@ -1,4 +1,4 @@
-//: [< Fil d'exécution](@previous)
+//: [< Sommaire](Sommaire)
 /*:
  # Fonctions
  ---
