@@ -30,6 +30,17 @@ class CredentialsManager {
         }
         return newCredential
     }
+    
+    func getCredentialCount() -> Int {
+        return _credentialList.count
+    }
+    
+    func getCredential(atIndex index:Int) -> Credentials? {
+        guard index >= 0 && index < getCredentialCount() else {
+            return nil
+        }
+        return _credentialList[index]
+    }
 }
 
 
