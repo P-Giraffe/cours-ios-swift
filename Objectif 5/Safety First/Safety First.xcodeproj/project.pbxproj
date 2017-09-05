@@ -14,6 +14,7 @@
 		F84AF4AC1F5ECA3300769F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F84AF4AB1F5ECA3300769F21 /* Assets.xcassets */; };
 		F84AF4AF1F5ECA3300769F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84AF4AD1F5ECA3300769F21 /* LaunchScreen.storyboard */; };
 		F84AF4BB1F5ED54F00769F21 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BA1F5ED54F00769F21 /* Credentials.swift */; };
+		F84AF4BD1F5EDCA500769F21 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F84AF4AE1F5ECA3300769F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F84AF4B01F5ECA3300769F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F84AF4BA1F5ED54F00769F21 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		FF26A124EA1AA165E71E6E20 /* Pods-Safety First.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				F84AF4BA1F5ED54F00769F21 /* Credentials.swift */,
+				F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84AF4BD1F5EDCA500769F21 /* CredentialsManager.swift in Sources */,
 				F84AF4BB1F5ED54F00769F21 /* Credentials.swift in Sources */,
 				F84AF4A71F5ECA3300769F21 /* ViewController.swift in Sources */,
 				F84AF4A51F5ECA3300769F21 /* AppDelegate.swift in Sources */,
