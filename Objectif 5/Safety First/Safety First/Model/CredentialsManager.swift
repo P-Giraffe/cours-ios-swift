@@ -39,7 +39,16 @@ class CredentialsManager {
         guard index >= 0 && index < getCredentialCount() else {
             return nil
         }
+    
         return _credentialList[index]
+    }
+    
+    func deleteCredential(atIndex index:Int) {
+        if let credToDelete = getCredential(atIndex: index) {
+            try? _realm.write {
+                _realm.delete(credToDelete)
+            }
+        }
     }
 }
 
