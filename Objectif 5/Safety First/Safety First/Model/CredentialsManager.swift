@@ -17,4 +17,22 @@ class CredentialsManager {
         _realm = try! Realm()
         _credentialList = _realm.objects(Credentials.self)
     }
+    
+    func addCredentials(title:String, login:String, password:String, url:String) -> Credentials {
+        let newCredential = Credentials()
+        newCredential.title = title
+        newCredential.login = login
+        newCredential.password = password
+        newCredential.url = url
+        
+        try? _realm.write {
+            _realm.add(newCredential)
+        }
+        return newCredential
+    }
 }
+
+
+
+
+
