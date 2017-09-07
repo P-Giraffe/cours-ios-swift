@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="vYJ-9j-kwU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8ae-Kh-1HL">
                             <connections>
-                                <segue destination="26i-Ij-JkW" kind="presentation" id="6TZ-rv-VhT"/>
+                                <segue destination="2KX-Nz-jBr" kind="presentation" id="6TZ-rv-VhT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -207,6 +207,18 @@
                             <outlet property="delegate" destination="26i-Ij-JkW" id="VSQ-Gz-z93"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="kDR-2g-oTb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oGf-GR-QXN">
+                            <connections>
+                                <action selector="dismissThisViewController:" destination="26i-Ij-JkW" id="ElL-Fn-A9M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="h8T-PI-HOf">
+                            <connections>
+                                <action selector="dismissThisViewController:" destination="26i-Ij-JkW" id="qUu-a0-VUq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ui_loginField" destination="PHg-DN-sJ7" id="xCV-fr-IHE"/>
                         <outlet property="ui_passwordField" destination="zFh-A8-yWW" id="RSW-1P-mzo"/>
@@ -216,7 +228,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54H-UM-ncq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529.375" y="151.05633802816902"/>
+            <point key="canvasLocation" x="3321" y="151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RR7-n0-Anc">
@@ -235,6 +247,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdX-Di-1ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605.625" y="152.11267605633802"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R8E-Mb-dXU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2KX-Nz-jBr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BwE-1o-6vh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="26i-Ij-JkW" kind="relationship" relationship="rootViewController" id="fFv-mK-ZgN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlC-12-wFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529.375" y="151.05633802816902"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,11 @@ class EditCredentialViewController: UITableViewController {
     @IBOutlet weak var ui_passwordField: UITextField!
     @IBOutlet weak var ui_urlField: UITextField!
     
+    
+    @IBAction func dismissThisViewController(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
