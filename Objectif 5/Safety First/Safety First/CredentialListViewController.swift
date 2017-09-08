@@ -27,6 +27,9 @@ class CredentialListViewController: UITableViewController {
     
     @IBAction func unwindToCredentialList(segue:UIStoryboardSegue) {
         print("unwindToCredentialList")
+        if segue.identifier == "saveAndReturnToListSegue" {
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {

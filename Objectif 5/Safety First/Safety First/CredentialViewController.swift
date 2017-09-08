@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController {
+class CredentialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

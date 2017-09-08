@@ -23,6 +23,13 @@ class EditCredentialViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "saveAndReturnToListSegue" {
             print("We should save the edits")
+            if let title = ui_titleField.text,
+                let login = ui_loginField.text,
+                let password = ui_passwordField.text,
+                let url = ui_passwordField.text {
+                let credentialsManager = CredentialsManager()
+                _ = credentialsManager.addCredentials(title: title, login: login, password: password, url: url)
+            }
         }
     }
     

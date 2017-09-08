@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,6 +36,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CxU-Ju-Y27" kind="show" id="P0N-v1-mzW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -53,6 +57,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSK-KG-kk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1609" y="152"/>
+        </scene>
+        <!--Credential View Controller-->
+        <scene sceneID="pPF-fa-WlW">
+            <objects>
+                <viewController id="CxU-Ju-Y27" customClass="CredentialViewController" customModule="Safety_First" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QXo-9Q-et5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-oR-X3U">
+                                <rect key="frame" x="10" y="64" width="300" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-JF-2v2">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mot de passe :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQQ-yb-TfX">
+                                        <rect key="frame" x="0.0" y="28" width="127" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejX-In-a3j">
+                                        <rect key="frame" x="0.0" y="56" width="47.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC3-vX-dVl">
+                                        <rect key="frame" x="0.0" y="84" width="300" height="30"/>
+                                        <state key="normal" title="Afficher le mot de passe"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-KX-rwP">
+                                        <rect key="frame" x="0.0" y="118" width="300" height="30"/>
+                                        <state key="normal" title="Copier le mot de passe"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4hV-KX-rwP" firstAttribute="centerX" secondItem="cGy-oR-X3U" secondAttribute="centerX" id="Il1-FS-eyw"/>
+                                    <constraint firstItem="nC3-vX-dVl" firstAttribute="centerX" secondItem="cGy-oR-X3U" secondAttribute="centerX" id="gdt-aJ-HxI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cGy-oR-X3U" firstAttribute="leading" secondItem="POr-i1-wOa" secondAttribute="leading" constant="10" id="22h-QS-Nce"/>
+                            <constraint firstItem="cGy-oR-X3U" firstAttribute="top" secondItem="POr-i1-wOa" secondAttribute="top" id="56c-kt-AoL"/>
+                            <constraint firstItem="POr-i1-wOa" firstAttribute="trailing" secondItem="cGy-oR-X3U" secondAttribute="trailing" constant="10" id="5QH-W4-sTg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="POr-i1-wOa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YnR-SG-3vn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473.125" y="-13.732394366197184"/>
         </scene>
         <!--Edit Credential View Controller-->
         <scene sceneID="E0r-cf-rTn">
@@ -275,7 +336,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlC-12-wFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529.375" y="151.05633802816902"/>
+            <point key="canvasLocation" x="2496" y="774"/>
         </scene>
     </scenes>
 </document>
