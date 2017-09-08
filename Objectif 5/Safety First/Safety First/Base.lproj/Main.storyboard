@@ -90,10 +90,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC3-vX-dVl">
                                         <rect key="frame" x="0.0" y="84" width="300" height="30"/>
                                         <state key="normal" title="Afficher le mot de passe"/>
+                                        <connections>
+                                            <action selector="displayPassword:" destination="CxU-Ju-Y27" eventType="touchUpInside" id="r57-ZC-bPT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-KX-rwP">
                                         <rect key="frame" x="0.0" y="118" width="300" height="30"/>
                                         <state key="normal" title="Copier le mot de passe"/>
+                                        <connections>
+                                            <action selector="copyPasswordToClipboard:" destination="CxU-Ju-Y27" eventType="touchUpInside" id="CHi-7w-1p1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -110,6 +116,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="POr-i1-wOa"/>
                     </view>
+                    <connections>
+                        <outlet property="ui_loginLabel" destination="AUe-JF-2v2" id="JQW-Kc-DoC"/>
+                        <outlet property="ui_passwordLabel" destination="YQQ-yb-TfX" id="lNj-D5-HY5"/>
+                        <outlet property="ui_urlLabel" destination="ejX-In-a3j" id="2Vz-Js-hcK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnR-SG-3vn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
