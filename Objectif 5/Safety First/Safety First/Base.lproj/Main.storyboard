@@ -37,7 +37,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="CxU-Ju-Y27" kind="show" id="P0N-v1-mzW"/>
+                                    <segue destination="CxU-Ju-Y27" kind="show" identifier="display-credentials" id="P0N-v1-mzW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

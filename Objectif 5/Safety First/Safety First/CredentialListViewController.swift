@@ -94,14 +94,20 @@ class CredentialListViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let credVC = segue.destination as? CredentialViewController,
+            let selectedIndex = self.tableView.indexPathForSelectedRow?.row,
+            let cred = _credentialsManager.getCredential(atIndex: selectedIndex)
+             {
+            credVC.setCredentials(cred)
+        }
     }
-    */
+    
 
 }

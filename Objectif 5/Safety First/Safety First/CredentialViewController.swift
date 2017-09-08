@@ -25,6 +25,7 @@ class CredentialViewController: UIViewController {
     }
     private func displayBasicData() {
         if let cred = _credentials {
+            self.title = cred.title
             ui_loginLabel.text = "Identifiant : \(cred.login)"
             ui_urlLabel.text = "Site Web : \(cred.url)"
         }
