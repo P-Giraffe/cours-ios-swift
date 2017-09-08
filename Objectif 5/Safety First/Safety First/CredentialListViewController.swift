@@ -13,20 +13,16 @@ class CredentialListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Safety First"
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // self.clearsSelectionOnViewWillAppear = true
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
-    }
-    
     @IBAction func unwindToCredentialList(segue:UIStoryboardSegue) {
-        print("unwindToCredentialList")
         if segue.identifier == "saveAndReturnToListSegue" {
             self.tableView.reloadData()
         }
