@@ -19,6 +19,14 @@ class CredentialListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
+    }
+    
+    @IBAction func unwindToCredentialList(segue:UIStoryboardSegue) {
+        print("unwindToCredentialList")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

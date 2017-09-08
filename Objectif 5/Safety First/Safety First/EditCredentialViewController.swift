@@ -20,6 +20,12 @@ class EditCredentialViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveAndReturnToListSegue" {
+            print("We should save the edits")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

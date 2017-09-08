@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -215,7 +216,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="h8T-PI-HOf">
                             <connections>
-                                <action selector="dismissThisViewController:" destination="26i-Ij-JkW" id="qUu-a0-VUq"/>
+                                <segue destination="CXH-bc-a9e" kind="unwind" identifier="saveAndReturnToListSegue" unwindAction="unwindToCredentialListWithSegue:" id="k39-c6-BaY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -227,6 +228,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54H-UM-ncq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CXH-bc-a9e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3321" y="151"/>
         </scene>
