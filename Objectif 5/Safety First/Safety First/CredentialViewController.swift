@@ -38,6 +38,9 @@ class CredentialViewController: UIViewController {
     }
     
     @IBAction func copyPasswordToClipboard(_ sender: Any) {
+        if let cred = _credentials {
+            UIPasteboard.general.string = cred.password
+        }
     }
     
     override func viewDidLoad() {
