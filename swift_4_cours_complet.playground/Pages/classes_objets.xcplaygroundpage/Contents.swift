@@ -5,42 +5,53 @@
  ### Maxime Britto - Swift 4
  */
 class Player {
-    var name:String
-    private var score:Int = 0
-    private var level:Int = 1
+    private var _name:String
+    private var _score:Int = 0
+    private var _level:Int = 1
+    
+    var name:String {
+        get {
+            return _name
+        }
+        set {
+            if newValue.count > 0 {
+                _name = newValue
+            }
+        }
+    }
     
     init(startName:String) {
-        name = startName
+        _name = startName
     }
     
     func getScore() -> Int {
-        return score
+        return _score
     }
     
     func getLevel() -> Int {
-        return level
+        return _level
     }
     
     func gameWon() {
-        changeScore(newScore: score + 5)
+        changeScore(newScore: _score + 5)
     }
     
     func gameLost() {
-        changeScore(newScore: score - 2)
+        changeScore(newScore: _score - 2)
     }
     
     func changeScore(newScore:Int) {
-        score = newScore
+        _score = newScore
         updateLevel()
     }
     
     private func updateLevel() {
-        if score < 10 {
-            level = 1
-        } else if score < 20 {
-            level = 2
+        if _score < 10 {
+            _level = 1
+        } else if _score < 20 {
+            _level = 2
         } else {
-            level = 3
+            _level = 3
         }
     }
 }
@@ -53,5 +64,8 @@ player2.gameWon()
 player1.gameLost()
 player1.changeScore(newScore: 30)
 let player3 = Player(startName: "Penny")
+print("Player : \(player3.name)")
+player3.name = "Super Penny"
+player3.name = ""
 
 //: [Optionnels >](@next)
