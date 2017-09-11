@@ -13,6 +13,7 @@
  * [Classes et Objets](classes_objets)
  * [Optionnels](Optionnels)
  * [Closures](Closures)
+ * [Héritage](Heritage)
  */
 
 
