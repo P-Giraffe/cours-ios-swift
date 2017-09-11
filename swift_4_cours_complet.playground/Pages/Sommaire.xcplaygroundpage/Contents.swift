@@ -14,6 +14,7 @@
  * [Optionnels](Optionnels)
  * [Closures](Closures)
  * [Héritage](Heritage)
+ * [Gestion des erreurs](Gestion_erreurs)
  */
 
 

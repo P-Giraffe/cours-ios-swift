@@ -12,5 +12,6 @@
         <page name='Optionnels'/>
         <page name='Closures'/>
         <page name='Heritage'/>
+        <page name='Gestion_erreurs'/>
     </pages>
 </playground>
