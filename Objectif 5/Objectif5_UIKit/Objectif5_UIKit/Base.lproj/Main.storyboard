@@ -29,13 +29,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Afficher second écran"/>
                                 <connections>
-                                    <segue destination="ZYP-4E-zkU" kind="presentation" id="IBC-OV-h3e"/>
+                                    <segue destination="ZYP-4E-zkU" kind="presentation" identifier="segue-ecran-2" id="IBC-OV-h3e"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyJ-Lg-y5l">
+                                <rect key="frame" x="32" y="139" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ui_textField" destination="oyJ-Lg-y5l" id="xud-2i-oSg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,6 +70,9 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="YNi-vs-ASN"/>
                     </view>
+                    <connections>
+                        <outlet property="ui_titleLabel" destination="LYD-Ya-Vvv" id="xe8-MK-i9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnd-ag-oft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

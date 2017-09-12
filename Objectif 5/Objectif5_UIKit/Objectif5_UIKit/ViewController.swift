@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var ui_textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +21,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue-ecran-2" {
+            if let text = ui_textField.text,
+                let prochainEcran = segue.destination as? SecondViewController {
+                prochainEcran.textToDisplay = text
+            }
+        }
+    }
 
 }
 

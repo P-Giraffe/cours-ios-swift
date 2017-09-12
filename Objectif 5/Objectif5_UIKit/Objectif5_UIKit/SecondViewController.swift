@@ -9,7 +9,15 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var ui_titleLabel: UILabel!
+    var textToDisplay:String?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let text = textToDisplay {
+            ui_titleLabel.text = "Ecran 2 : \(text)"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
