@@ -39,11 +39,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-By-tuK">
+                                <rect key="frame" x="32" y="177" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Copier le texte"/>
+                                <connections>
+                                    <action selector="copyTextToClipboard" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2s-kk-DAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INk-fn-5To">
+                                <rect key="frame" x="32" y="207" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Coller le texte"/>
+                                <connections>
+                                    <action selector="copyTextToClipboard" destination="BYZ-38-t0r" eventType="touchUpInside" id="k3M-JE-3vM"/>
+                                    <action selector="pasteTextFromClipboard" destination="BYZ-38-t0r" eventType="touchUpInside" id="mv6-i2-5ou"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ui_pasteTextButton" destination="INk-fn-5To" id="2yz-HR-KxR"/>
                         <outlet property="ui_textField" destination="oyJ-Lg-y5l" id="xud-2i-oSg"/>
                     </connections>
                 </viewController>
