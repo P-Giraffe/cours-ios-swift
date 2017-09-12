@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let p1 = Player()
+        p1.name = "Sheldon"
+        p1.score = -1
+        
+        print("Score p1 : \(p1.score)")
     }
 
     override func didReceiveMemoryWarning() {
