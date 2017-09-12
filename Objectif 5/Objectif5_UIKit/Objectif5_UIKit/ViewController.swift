@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var ui_textField: UITextField!
     @IBOutlet weak var ui_pasteTextButton: UIButton!
     
+    @IBAction func returnHome(_ segue:UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func copyTextToClipboard() {
         if let text = ui_textField.text {
             UIPasteboard.general.string = text
