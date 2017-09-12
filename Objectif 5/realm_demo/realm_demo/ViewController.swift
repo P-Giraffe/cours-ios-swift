@@ -14,6 +14,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        listObjects()
+    }
+    
+    func listObjects() {
+        let realm = try! Realm()
+        let playerList = realm.objects(Player.self)
+        for player in playerList {
+            print(player.name)
+        }
+    }
+    
+    func addObject() {
         let p1 = Player()
         p1.name = "Sheldon"
         p1.score = -1
@@ -29,10 +41,11 @@ class ViewController: UIViewController {
         realm.beginWrite()
         p1.name = "Tata"
         try! realm.commitWrite()
-        
+        /*
         try? realm.write {
             realm.delete(p1)
         }
+         */
     }
 
     override func didReceiveMemoryWarning() {
