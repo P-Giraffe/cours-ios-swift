@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ecran 1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Objectif5_UIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1y9-xF-ar5"/>
+                    <navigationItem key="navigationItem" title="Ecran 1" id="1y9-xF-ar5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E0W-rZ-fFa"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ui_pasteTextButton" destination="INk-fn-5To" id="2yz-HR-KxR"/>
                         <outlet property="ui_textField" destination="oyJ-Lg-y5l" id="xud-2i-oSg"/>
@@ -71,7 +73,7 @@
             </objects>
             <point key="canvasLocation" x="784.79999999999995" y="29.23538230884558"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Title-->
         <scene sceneID="B87-8n-tez">
             <objects>
                 <viewController id="ZYP-4E-zkU" customClass="SecondViewController" customModule="Objectif5_UIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,6 +96,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YNi-vs-ASN"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="t83-yx-1Si"/>
                     <connections>
                         <outlet property="ui_titleLabel" destination="LYD-Ya-Vvv" id="xe8-MK-i9g"/>
                     </connections>
