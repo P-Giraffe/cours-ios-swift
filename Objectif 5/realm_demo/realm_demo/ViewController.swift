@@ -23,7 +23,16 @@ class ViewController: UIViewController {
         let realm = try! Realm()
         realm.beginWrite()
         realm.add(p1)
+        p1.name = "Toto"
         try? realm.commitWrite()
+        
+        realm.beginWrite()
+        p1.name = "Tata"
+        try! realm.commitWrite()
+        
+        try? realm.write {
+            realm.delete(p1)
+        }
     }
 
     override func didReceiveMemoryWarning() {
