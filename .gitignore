@@ -71,3 +71,6 @@ fastlane/test_output
 /Objectif 5/Safety First/Podfile.lock
 /Objectif 5/Safety First/Pods
 /Objectif 5/Safety First/Safety First.xcworkspace
+/Objectif 5/realm_demo/Pods
+/Objectif 5/realm_demo/realm_demo.xcworkspace
+/Objectif 5/realm_demo/Podfile.lock
