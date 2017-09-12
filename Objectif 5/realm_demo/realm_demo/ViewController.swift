@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         p1.score = -1
         
         print("Score p1 : \(p1.score)")
+        
+        let realm = try! Realm()
+        realm.beginWrite()
+        realm.add(p1)
+        try? realm.commitWrite()
     }
 
     override func didReceiveMemoryWarning() {
