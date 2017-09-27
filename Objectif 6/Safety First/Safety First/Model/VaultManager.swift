@@ -13,7 +13,36 @@ class VaultManager {
     private var _vault:Vault?
     
     func getMainVault() -> Vault? {
-        let realm = try! Realm()
-        return Vault(withRealm: realm)
+        var possibleKey:Data?
+        //charger la clee
+        possibleKey = loadRealmEncryptionKey()
+        
+        //si pas de clée generer une nouvelle clée
+        if possibleKey == nil {
+            possibleKey = generateRealmEncryptionKey()
+        }
+        
+        //config realm avec cette clee
+        if let realmEncyptionKey = possibleKey {
+            let realmConf = Realm.Configuration(encryptionKey: realmEncyptionKey)
+            let realm = try! Realm(configuration: realmConf)
+            _vault = Vault(withRealm: realm)
+        }
+        
+        return _vault
     }
+    
+    private func loadRealmEncryptionKey() -> Data? {
+        return nil
+    }
+    
+    private func generateRealmEncryptionKey() -> Data? {
+        return nil
+    }
+    
 }
+
+
+
+
+
