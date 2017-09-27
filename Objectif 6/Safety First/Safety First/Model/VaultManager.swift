@@ -12,6 +12,7 @@ import KeychainAccess
 
 class VaultManager {
     private static let REALM_ENCRYPTION_KEY = "REALM_ENCRYPTION_KEY"
+    private static let MASTER_PASSWORD = "SAFETY_FIRST_MASTER_PASSWORD"
     private var _vault:Vault?
     private var _keychain:Keychain
     
@@ -49,6 +50,18 @@ class VaultManager {
         
         try! _keychain.set(generatedData, key: VaultManager.REALM_ENCRYPTION_KEY)
         return generatedData
+    }
+    
+    func saveMasterPassword(_ password:String) {
+        _keychain[VaultManager.MASTER_PASSWORD] = password
+    }
+    
+    func getMasterPassword() -> String? {
+        return _keychain[VaultManager.MASTER_PASSWORD]
+    }
+    
+    func hasMasterPassword() -> Bool {
+        return getMasterPassword() != nil
     }
     
 }
