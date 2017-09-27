@@ -38,10 +38,17 @@ class VaultManager {
     }
     
     private func generateRealmEncryptionKey() -> Data? {
-        return nil
+        var data:Data? = Data(countOfRandomData: 64)
+        return data
     }
     
 }
+
+
+
+
+
+
 
 
 
