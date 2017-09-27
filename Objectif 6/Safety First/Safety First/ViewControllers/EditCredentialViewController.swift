@@ -27,7 +27,7 @@ class EditCredentialViewController: UITableViewController {
                 let login = ui_loginField.text,
                 let password = ui_passwordField.text,
                 let url = ui_urlField.text {
-                let credentialsManager = CredentialsManager()
+                let credentialsManager = Vault()
                 _ = credentialsManager.addCredentials(title: title, login: login, password: password, url: url)
             }
         }

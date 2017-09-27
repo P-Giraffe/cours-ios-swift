@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CredentialListViewController: UITableViewController {
-    private let _credentialsManager = CredentialsManager()
+class VaultViewController: UITableViewController {
+    private let _credentialsManager = Vault()
     
     override func viewDidLoad() {
         super.viewDidLoad()

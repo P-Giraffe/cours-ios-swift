@@ -14,8 +14,8 @@
 		F84AF4AC1F5ECA3300769F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F84AF4AB1F5ECA3300769F21 /* Assets.xcassets */; };
 		F84AF4AF1F5ECA3300769F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84AF4AD1F5ECA3300769F21 /* LaunchScreen.storyboard */; };
 		F84AF4BB1F5ED54F00769F21 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BA1F5ED54F00769F21 /* Credentials.swift */; };
-		F84AF4BD1F5EDCA500769F21 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */; };
-		F8D24E141F616EF000323D7A /* CredentialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D24E131F616EF000323D7A /* CredentialListViewController.swift */; };
+		F84AF4BD1F5EDCA500769F21 /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BC1F5EDCA500769F21 /* Vault.swift */; };
+		F8D24E141F616EF000323D7A /* VaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D24E131F616EF000323D7A /* VaultViewController.swift */; };
 		F8D24E161F61770400323D7A /* EditCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D24E151F61770400323D7A /* EditCredentialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +30,8 @@
 		F84AF4AE1F5ECA3300769F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F84AF4B01F5ECA3300769F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F84AF4BA1F5ED54F00769F21 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
-		F8D24E131F616EF000323D7A /* CredentialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialListViewController.swift; sourceTree = "<group>"; };
+		F84AF4BC1F5EDCA500769F21 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
+		F8D24E131F616EF000323D7A /* VaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultViewController.swift; sourceTree = "<group>"; };
 		F8D24E151F61770400323D7A /* EditCredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCredentialViewController.swift; sourceTree = "<group>"; };
 		FF26A124EA1AA165E71E6E20 /* Pods-Safety First.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Safety First.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Safety First/Pods-Safety First.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +65,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F81682D81F7BC7520068A2D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8D24E131F616EF000323D7A /* VaultViewController.swift */,
+				F8D24E151F61770400323D7A /* EditCredentialViewController.swift */,
+				F84AF4A61F5ECA3300769F21 /* CredentialViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F84AF4981F5ECA3300769F21 = {
 			isa = PBXGroup;
 			children = (
@@ -86,15 +96,13 @@
 		F84AF4A31F5ECA3300769F21 /* Safety First */ = {
 			isa = PBXGroup;
 			children = (
+				F81682D81F7BC7520068A2D5 /* ViewControllers */,
 				F84AF4B91F5ED53600769F21 /* Model */,
 				F84AF4A41F5ECA3300769F21 /* AppDelegate.swift */,
-				F84AF4A61F5ECA3300769F21 /* CredentialViewController.swift */,
 				F84AF4A81F5ECA3300769F21 /* Main.storyboard */,
 				F84AF4AB1F5ECA3300769F21 /* Assets.xcassets */,
 				F84AF4AD1F5ECA3300769F21 /* LaunchScreen.storyboard */,
 				F84AF4B01F5ECA3300769F21 /* Info.plist */,
-				F8D24E131F616EF000323D7A /* CredentialListViewController.swift */,
-				F8D24E151F61770400323D7A /* EditCredentialViewController.swift */,
 			);
 			path = "Safety First";
 			sourceTree = "<group>";
@@ -103,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F84AF4BA1F5ED54F00769F21 /* Credentials.swift */,
-				F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */,
+				F84AF4BC1F5EDCA500769F21 /* Vault.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,12 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F84AF4BD1F5EDCA500769F21 /* CredentialsManager.swift in Sources */,
+				F84AF4BD1F5EDCA500769F21 /* Vault.swift in Sources */,
 				F84AF4BB1F5ED54F00769F21 /* Credentials.swift in Sources */,
 				F84AF4A71F5ECA3300769F21 /* CredentialViewController.swift in Sources */,
 				F8D24E161F61770400323D7A /* EditCredentialViewController.swift in Sources */,
 				F84AF4A51F5ECA3300769F21 /* AppDelegate.swift in Sources */,
-				F8D24E141F616EF000323D7A /* CredentialListViewController.swift in Sources */,
+				F8D24E141F616EF000323D7A /* VaultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

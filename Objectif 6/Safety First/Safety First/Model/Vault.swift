@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class CredentialsManager {
+class Vault {
     private let _realm:Realm
     private let _credentialList:Results<Credentials>
     
