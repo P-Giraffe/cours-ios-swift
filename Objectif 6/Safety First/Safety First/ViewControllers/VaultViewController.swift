@@ -9,7 +9,7 @@
 import UIKit
 
 class VaultViewController: UITableViewController {
-    private let _credentialsManager = Vault()
+    private let _vault:Vault? = VaultManager().getMainVault()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +40,14 @@ class VaultViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _credentialsManager.getCredentialCount()
+        return _vault?.getCredentialCount() ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "credential-cell", for: indexPath)
 
-        if let credentials = _credentialsManager.getCredential(atIndex: indexPath.row) {
+        if let credentials = _vault?.getCredential(atIndex: indexPath.row) {
             cell.textLabel?.text = credentials.title
         }
 
@@ -99,7 +99,7 @@ class VaultViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if let credVC = segue.destination as? CredentialViewController,
             let selectedIndex = self.tableView.indexPathForSelectedRow?.row,
-            let cred = _credentialsManager.getCredential(atIndex: selectedIndex)
+            let cred = _vault?.getCredential(atIndex: selectedIndex)
              {
             credVC.setCredentials(cred)
         }
