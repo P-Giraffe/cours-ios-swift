@@ -9,4 +9,5 @@ target 'Safety First' do
 
   # Pods for Safety First
   pod 'RealmSwift', '~> 2.10.0'
+  pod 'KeychainAccess', '~> 3.1.0'
 end
