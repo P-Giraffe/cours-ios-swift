@@ -11,19 +11,24 @@ import RealmSwift
 import KeychainAccess
 
 class VaultManager {
+    private static let REALM_ENCRYPTION_KEY = "REALM_ENCRYPTION_KEY"
     private var _vault:Vault?
+    private var _keychain:Keychain
     
+    init() {
+        _keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "fr.purplegiraffe.ios.Safety-First")
+    }
     func getMainVault() -> Vault? {
         var possibleKey:Data?
-        //charger la clee
+        //charger la clée
         possibleKey = loadRealmEncryptionKey()
         
-        //si pas de clée generer une nouvelle clée
+        //si pas de clée générer une nouvelle clée
         if possibleKey == nil {
             possibleKey = generateRealmEncryptionKey()
         }
         
-        //config realm avec cette clee
+        //config realm avec cette clée
         if let realmEncyptionKey = possibleKey {
             let realmConf = Realm.Configuration(encryptionKey: realmEncyptionKey)
             let realm = try! Realm(configuration: realmConf)
@@ -34,12 +39,16 @@ class VaultManager {
     }
     
     private func loadRealmEncryptionKey() -> Data? {
-        return nil
+        return _keychain[data: VaultManager.REALM_ENCRYPTION_KEY]
     }
     
     private func generateRealmEncryptionKey() -> Data? {
-        var data:Data? = Data(countOfRandomData: 64)
-        return data
+        guard let generatedData = Data(countOfRandomData: 64) else {
+            return nil
+        }
+        
+        try! _keychain.set(generatedData, key: VaultManager.REALM_ENCRYPTION_KEY)
+        return generatedData
     }
     
 }
