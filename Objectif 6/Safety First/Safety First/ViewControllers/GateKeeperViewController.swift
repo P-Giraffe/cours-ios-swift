@@ -10,6 +10,7 @@ import UIKit
 
 class GateKeeperViewController: UIViewController {
 
+    @IBOutlet weak var ui_passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,8 +18,13 @@ class GateKeeperViewController: UIViewController {
     }
     @IBAction func unlockWithPassword() {
         //Verifier mot de passe
-        
-        displayVaultViewController()
+        let vaultManager = VaultManager()
+        if let typedPassword = ui_passwordField.text,
+            let vaultPassword = vaultManager.getMasterPassword(),
+            typedPassword == vaultPassword
+        {
+            displayVaultViewController()
+        }
     }
     
     func displayVaultViewController() {

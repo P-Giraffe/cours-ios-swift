@@ -375,6 +375,9 @@
                     <navigationItem key="navigationItem" title="Safety First" id="Abu-yn-sOr">
                         <barButtonItem key="backBarButtonItem" title="Verrouiller" id="VgP-FW-vhQ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ui_passwordField" destination="hXX-ti-Xxj" id="0fJ-gb-P9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmV-U1-ckq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
