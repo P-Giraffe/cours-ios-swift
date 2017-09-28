@@ -331,10 +331,10 @@
             </objects>
             <point key="canvasLocation" x="45" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Setup View Controller-->
         <scene sceneID="byz-xX-pIT">
             <objects>
-                <viewController id="umQ-3h-cmJ" sceneMemberID="viewController">
+                <viewController id="umQ-3h-cmJ" customClass="SetupViewController" customModule="Safety_First" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kCi-Fn-0Nx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,11 +373,19 @@
                         <viewLayoutGuide key="safeArea" id="IDX-hc-OPe"/>
                     </view>
                     <navigationItem key="navigationItem" id="kvD-7S-BiE">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N4D-8e-Wx3"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="M3f-JA-fMS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="M3f-JA-fMS">
+                            <connections>
+                                <segue destination="fP8-Ob-H4N" kind="unwind" unwindAction="savedInitialSetup:" id="RIR-Mr-BCZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ui_passwordField1" destination="nsO-Xs-5rb" id="QJ0-Mk-ega"/>
+                        <outlet property="ui_passwordField2" destination="xmB-wo-YaE" id="bKU-PX-3PY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wd-FW-HLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fP8-Ob-H4N" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2398" y="-549"/>
         </scene>

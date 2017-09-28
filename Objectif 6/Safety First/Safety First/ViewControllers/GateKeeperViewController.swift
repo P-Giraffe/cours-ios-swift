@@ -20,6 +20,11 @@ class GateKeeperViewController: UIViewController {
             performSegue(withIdentifier: "setup-new-vault", sender: nil)
         }
     }
+    
+    @IBAction func savedInitialSetup(_ segue:UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func unlockWithPassword() {
         //Verifier mot de passe
         let vaultManager = VaultManager()
