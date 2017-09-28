@@ -56,7 +56,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSK-KG-kk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="152"/>
+            <point key="canvasLocation" x="1691" y="150"/>
         </scene>
         <!--Credential View Controller-->
         <scene sceneID="pPF-fa-WlW">
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnR-SG-3vn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2447" y="152"/>
+            <point key="canvasLocation" x="2556" y="150"/>
         </scene>
         <!--Edit Credential View Controller-->
         <scene sceneID="E0r-cf-rTn">
@@ -329,9 +329,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdX-Di-1ec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.625" y="152.11267605633802"/>
+            <point key="canvasLocation" x="45" y="151"/>
         </scene>
-        <!--Gate Keeper View Controller-->
+        <!--Safety First-->
         <scene sceneID="ZoQ-Jy-NLF">
             <objects>
                 <viewController id="gMh-QO-q9h" customClass="GateKeeperViewController" customModule="Safety_First" customModuleProvider="target" sceneMemberID="viewController">
@@ -339,9 +339,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-gV-D4c">
-                                <rect key="frame" x="109" y="226" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez vous authentifier pour accéder à votre coffre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw2-4W-ADq">
+                                <rect key="frame" x="8" y="64" width="304" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXX-ti-Xxj">
+                                <rect key="frame" x="8" y="93" width="304" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-gV-D4c">
+                                <rect key="frame" x="109" y="131" width="103" height="30"/>
                                 <state key="normal" title="Ouvrir le coffre"/>
                                 <connections>
                                     <action selector="unlockWithPassword" destination="gMh-QO-q9h" eventType="touchUpInside" id="1ZH-8f-0r5"/>
@@ -349,13 +360,25 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pw2-4W-ADq" firstAttribute="leading" secondItem="Nyi-SJ-opO" secondAttribute="leading" constant="8" id="4Bb-SA-Sh1"/>
+                            <constraint firstItem="1PZ-gV-D4c" firstAttribute="top" secondItem="hXX-ti-Xxj" secondAttribute="bottom" constant="8" id="684-WP-DDh"/>
+                            <constraint firstItem="Pw2-4W-ADq" firstAttribute="top" secondItem="Nyi-SJ-opO" secondAttribute="top" id="G8s-Ko-DUc"/>
+                            <constraint firstItem="hXX-ti-Xxj" firstAttribute="top" secondItem="Pw2-4W-ADq" secondAttribute="bottom" constant="8" id="aoZ-cg-DY9"/>
+                            <constraint firstItem="Nyi-SJ-opO" firstAttribute="trailing" secondItem="Pw2-4W-ADq" secondAttribute="trailing" constant="8" id="h9U-p7-gT7"/>
+                            <constraint firstItem="hXX-ti-Xxj" firstAttribute="leading" secondItem="Pw2-4W-ADq" secondAttribute="leading" id="pVm-NC-9kR"/>
+                            <constraint firstItem="1PZ-gV-D4c" firstAttribute="centerX" secondItem="hXX-ti-Xxj" secondAttribute="centerX" id="wny-hI-M7j"/>
+                            <constraint firstItem="hXX-ti-Xxj" firstAttribute="trailing" secondItem="Pw2-4W-ADq" secondAttribute="trailing" id="zyG-4w-RwF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Nyi-SJ-opO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Abu-yn-sOr"/>
+                    <navigationItem key="navigationItem" title="Safety First" id="Abu-yn-sOr">
+                        <barButtonItem key="backBarButtonItem" title="Verrouiller" id="VgP-FW-vhQ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmV-U1-ckq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1230" y="407"/>
+            <point key="canvasLocation" x="849.375" y="150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R8E-Mb-dXU">
