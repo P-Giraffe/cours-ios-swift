@@ -331,6 +331,56 @@
             </objects>
             <point key="canvasLocation" x="45" y="151"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="byz-xX-pIT">
+            <objects>
+                <viewController id="umQ-3h-cmJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kCi-Fn-0Nx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez choisir votre mot de passe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-NX-nSZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsO-Xs-5rb">
+                                <rect key="frame" x="30" y="93" width="260" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmation de mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmB-wo-YaE">
+                                <rect key="frame" x="30" y="143" width="260" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5d7-NX-nSZ" firstAttribute="leading" secondItem="IDX-hc-OPe" secondAttribute="leading" id="30l-qF-qW2"/>
+                            <constraint firstItem="IDX-hc-OPe" firstAttribute="trailing" secondItem="5d7-NX-nSZ" secondAttribute="trailing" id="CPy-Pl-Beq"/>
+                            <constraint firstItem="xmB-wo-YaE" firstAttribute="trailing" secondItem="nsO-Xs-5rb" secondAttribute="trailing" id="Fxv-ad-MwR"/>
+                            <constraint firstItem="xmB-wo-YaE" firstAttribute="top" secondItem="nsO-Xs-5rb" secondAttribute="bottom" constant="20" id="NUu-uS-lCO"/>
+                            <constraint firstItem="nsO-Xs-5rb" firstAttribute="top" secondItem="5d7-NX-nSZ" secondAttribute="bottom" constant="8" id="ZW0-bE-ZFt"/>
+                            <constraint firstItem="IDX-hc-OPe" firstAttribute="trailing" secondItem="nsO-Xs-5rb" secondAttribute="trailing" constant="30" id="ZWr-ui-rTA"/>
+                            <constraint firstItem="5d7-NX-nSZ" firstAttribute="top" secondItem="IDX-hc-OPe" secondAttribute="top" id="jDI-nT-dBr"/>
+                            <constraint firstItem="nsO-Xs-5rb" firstAttribute="leading" secondItem="IDX-hc-OPe" secondAttribute="leading" constant="30" id="nua-Z8-0TT"/>
+                            <constraint firstItem="xmB-wo-YaE" firstAttribute="leading" secondItem="nsO-Xs-5rb" secondAttribute="leading" id="x20-gj-Zzu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IDX-hc-OPe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kvD-7S-BiE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N4D-8e-Wx3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="M3f-JA-fMS"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wd-FW-HLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2398" y="-549"/>
+        </scene>
         <!--Safety First-->
         <scene sceneID="ZoQ-Jy-NLF">
             <objects>
@@ -377,6 +427,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ui_passwordField" destination="hXX-ti-Xxj" id="0fJ-gb-P9P"/>
+                        <segue destination="F43-Yi-oap" kind="presentation" identifier="setup-new-vault" id="uMD-gG-5M2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmV-U1-ckq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,6 +451,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlC-12-wFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2481" y="946"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oov-Tb-MPE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F43-Yi-oap" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wxd-4w-B4Y">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="umQ-3h-cmJ" kind="relationship" relationship="rootViewController" id="F3G-GS-cNT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yi7-bE-OaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="-549"/>
         </scene>
     </scenes>
 </document>

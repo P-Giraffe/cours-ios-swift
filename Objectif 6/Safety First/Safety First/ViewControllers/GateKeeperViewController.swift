@@ -15,6 +15,10 @@ class GateKeeperViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let vaultManager = VaultManager()
+        if vaultManager.hasMasterPassword() == false {
+            performSegue(withIdentifier: "setup-new-vault", sender: nil)
+        }
     }
     @IBAction func unlockWithPassword() {
         //Verifier mot de passe
