@@ -29,6 +29,11 @@ class GateKeeperViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        ui_passwordField.text = nil
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ui_biometricsButton.isHidden = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) == false
