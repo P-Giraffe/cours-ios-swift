@@ -16,6 +16,17 @@ class GateKeeperViewController: UIViewController {
     @IBOutlet weak var ui_biometricsButton: UIButton!
     
     @IBAction func unlockWithBiometrics() {
+        let context = LAContext()
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Déverrouiller votre coffre fort", reply: { (isOwnerConfirmed, _) in
+                DispatchQueue.main.async {
+                    if isOwnerConfirmed == true {
+                        //afficher le coffre
+                        self.displayVaultViewController()
+                    }
+                }
+            })
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
