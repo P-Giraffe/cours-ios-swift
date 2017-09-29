@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class GateKeeperViewController: UIViewController {
 
     @IBOutlet weak var ui_passwordField: UITextField!
+    
+    @IBOutlet weak var ui_biometricsButton: UIButton!
+    
+    @IBAction func unlockWithBiometrics() {
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        ui_biometricsButton.isHidden = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) == false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

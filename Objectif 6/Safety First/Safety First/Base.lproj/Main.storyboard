@@ -416,12 +416,21 @@
                                     <action selector="unlockWithPassword" destination="gMh-QO-q9h" eventType="touchUpInside" id="1ZH-8f-0r5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ou2-mR-wUs">
+                                <rect key="frame" x="36" y="169" width="250" height="30"/>
+                                <state key="normal" title="Ouvrir le coffre avec TouchID/FaceID"/>
+                                <connections>
+                                    <action selector="unlockWithBiometrics" destination="gMh-QO-q9h" eventType="touchUpInside" id="EIF-H3-HYq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Pw2-4W-ADq" firstAttribute="leading" secondItem="Nyi-SJ-opO" secondAttribute="leading" constant="8" id="4Bb-SA-Sh1"/>
                             <constraint firstItem="1PZ-gV-D4c" firstAttribute="top" secondItem="hXX-ti-Xxj" secondAttribute="bottom" constant="8" id="684-WP-DDh"/>
+                            <constraint firstItem="ou2-mR-wUs" firstAttribute="centerX" secondItem="1PZ-gV-D4c" secondAttribute="centerX" id="7dT-u9-HeB"/>
                             <constraint firstItem="Pw2-4W-ADq" firstAttribute="top" secondItem="Nyi-SJ-opO" secondAttribute="top" id="G8s-Ko-DUc"/>
+                            <constraint firstItem="ou2-mR-wUs" firstAttribute="top" secondItem="1PZ-gV-D4c" secondAttribute="bottom" constant="8" id="PRt-4e-VUP"/>
                             <constraint firstItem="hXX-ti-Xxj" firstAttribute="top" secondItem="Pw2-4W-ADq" secondAttribute="bottom" constant="8" id="aoZ-cg-DY9"/>
                             <constraint firstItem="Nyi-SJ-opO" firstAttribute="trailing" secondItem="Pw2-4W-ADq" secondAttribute="trailing" constant="8" id="h9U-p7-gT7"/>
                             <constraint firstItem="hXX-ti-Xxj" firstAttribute="leading" secondItem="Pw2-4W-ADq" secondAttribute="leading" id="pVm-NC-9kR"/>
@@ -434,6 +443,7 @@
                         <barButtonItem key="backBarButtonItem" title="Verrouiller" id="VgP-FW-vhQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ui_biometricsButton" destination="ou2-mR-wUs" id="Ede-Es-k4k"/>
                         <outlet property="ui_passwordField" destination="hXX-ti-Xxj" id="0fJ-gb-P9P"/>
                         <segue destination="F43-Yi-oap" kind="presentation" identifier="setup-new-vault" id="uMD-gG-5M2"/>
                     </connections>
