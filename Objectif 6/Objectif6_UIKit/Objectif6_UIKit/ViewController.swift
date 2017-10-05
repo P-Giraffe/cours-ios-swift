@@ -10,6 +10,10 @@ import UIKit
 import MobileCoreServices
 
 class ViewController: UIViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        performSegue(withIdentifier: "display-modal-screen", sender: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        return true
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 }
 
