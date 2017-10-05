@@ -5,6 +5,13 @@
  ### Maxime Britto - Swift 4
  */
 class Player {
+    private static let DEFAULT_NAME = "John Doe"
+    private static var s_lastId:Int = 0
+    private static func getNextId() -> Int {
+        s_lastId = s_lastId + 1
+        return s_lastId
+    }
+    private var _id:Int
     private var _name:String
     private var _score:Int = 0
     private var _level:Int = 1
@@ -21,7 +28,12 @@ class Player {
     }
     
     init(startName:String) {
-        _name = startName
+        _id = Player.getNextId()
+        if startName.count == 0 {
+            _name = Player.DEFAULT_NAME
+        } else {
+            _name = startName
+        }
     }
     
     func getScore() -> Int {
@@ -64,7 +76,6 @@ player2.gameWon()
 player1.gameLost()
 player1.changeScore(newScore: 30)
 let player3 = Player(startName: "Penny")
-print("Player : \(player3.name)")
 player3.name = "Super Penny"
 player3.name = ""
 
