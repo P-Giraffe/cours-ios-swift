@@ -12,7 +12,13 @@ import MobileCoreServices
 class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
-        performSegue(withIdentifier: "display-modal-screen", sender: nil)
+        //Declenchement de segue manuellement
+        //performSegue(withIdentifier: "display-modal-screen", sender: nil)
+        
+        //Affichage d'écran sans segue
+        if let nextScreen = storyboard?.instantiateViewController(withIdentifier: "ModalScreen") {
+            present(nextScreen, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {

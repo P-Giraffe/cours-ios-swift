@@ -42,7 +42,7 @@
         <!--View Controller-->
         <scene sceneID="xcl-Sf-xaI">
             <objects>
-                <viewController id="ecB-ky-qgk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalScreen" id="ecB-ky-qgk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vvt-AA-L7I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
