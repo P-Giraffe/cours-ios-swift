@@ -8,17 +8,36 @@
 
 import UIKit
 import MobileCoreServices
+import LocalAuthentication
 
 class ViewController: UIViewController {
+    @IBOutlet weak var ui_mainLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         //Declenchement de segue manuellement
         //performSegue(withIdentifier: "display-modal-screen", sender: nil)
         
         //Affichage d'écran sans segue
-        if let nextScreen = storyboard?.instantiateViewController(withIdentifier: "ModalScreen") {
-            present(nextScreen, animated: true, completion: nil)
+//        if let nextScreen = storyboard?.instantiateViewController(withIdentifier: "ModalScreen") {
+//            present(nextScreen, animated: true, completion: nil)
+//        }
+        
+        let context = LAContext()
+        if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: nil) {
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthentication, localizedReason: "Prouvez votre identité", reply: { (isOwner, error) in
+                DispatchQueue.main.async {
+                    if let err = error {
+                        self.ui_mainLabel.text = err.localizedDescription
+                    } else if isOwner == true {
+                        self.ui_mainLabel.text = "Bienvenue cher propriétaire"
+                    } else {
+                        self.ui_mainLabel.text = "😱"
+                    }
+                }
+                
+            })
         }
+        print("Coucou")
     }
 
     override func viewDidLoad() {

@@ -32,6 +32,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ui_mainLabel" destination="GZY-15-dBY" id="Qr2-8O-77k"/>
                         <segue destination="ecB-ky-qgk" kind="presentation" identifier="display-modal-screen" id="Ld5-3D-CR4"/>
                     </connections>
                 </viewController>
