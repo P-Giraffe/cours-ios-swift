@@ -1,0 +1,6 @@
+framework module Pods_Safety_First {
+  umbrella header "Pods-Safety First-umbrella.h"
+
+  export *
+  module * { export * }
+}

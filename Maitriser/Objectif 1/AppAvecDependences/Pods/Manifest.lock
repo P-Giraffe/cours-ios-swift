@@ -1,0 +1,22 @@
+PODS:
+  - SnapKit (3.2.0)
+
+DEPENDENCIES:
+  - SnapKit (from `https://github.com/SnapKit/SnapKit.git`, branch `swift-4`)
+
+EXTERNAL SOURCES:
+  SnapKit:
+    :branch: swift-4
+    :git: https://github.com/SnapKit/SnapKit.git
+
+CHECKOUT OPTIONS:
+  SnapKit:
+    :commit: d31148f449abe819fd1a58d5e07e94874c7e6003
+    :git: https://github.com/SnapKit/SnapKit.git
+
+SPEC CHECKSUMS:
+  SnapKit: c71c530b73cedd2a8b998098687001baff265086
+
+PODFILE CHECKSUM: 83e81bd04d48e22e671d055eb10c22c6e1955936
+
+COCOAPODS: 1.1.1

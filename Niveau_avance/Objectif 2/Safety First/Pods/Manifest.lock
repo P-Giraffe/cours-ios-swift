@@ -1,0 +1,23 @@
+PODS:
+  - 1PasswordExtension (1.8.4)
+  - KeychainAccess (3.1.0)
+  - Realm (2.10.2):
+    - Realm/Headers (= 2.10.2)
+  - Realm/Headers (2.10.2)
+  - RealmSwift (2.10.2):
+    - Realm (= 2.10.2)
+
+DEPENDENCIES:
+  - 1PasswordExtension (~> 1.8.4)
+  - KeychainAccess (~> 3.1.0)
+  - RealmSwift (~> 2.10.0)
+
+SPEC CHECKSUMS:
+  1PasswordExtension: e775a29310c65851e5a6cec1afc349ab4e334e47
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
+  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+
+PODFILE CHECKSUM: 0ac77da8ed0986fa02472158ca55834f9458fad9
+
+COCOAPODS: 1.2.0
