@@ -58,4 +58,8 @@ class Credentials: Object {
             try? realm?.commitWrite()
         }
     }
+    
+    var isPasswordSafe:SecurityManager.SecurityAnswer {
+        return SecurityManager.shared.isPasswordSafe(password: self.password)
+    }
 }

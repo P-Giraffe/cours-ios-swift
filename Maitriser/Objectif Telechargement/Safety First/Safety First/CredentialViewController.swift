@@ -29,6 +29,12 @@ class CredentialViewController: UIViewController {
             self.title = cred.title
             ui_loginLabel.text = "Identifiant : \(cred.login)"
             ui_urlLabel.text = "Site Web : \(cred.url)"
+            
+            if cred.isPasswordSafe.result {
+                ui_securityWarningButton.isHidden = true
+            } else {
+                ui_securityWarningButton.isHidden = false
+            }
         }
     }
     
