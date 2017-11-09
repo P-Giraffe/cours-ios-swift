@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import Alamofire
 
 class SecurityManager {
+    private static let TOP_100_PASSWORD_URL = "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/10_million_password_list_top_100.txt"
+    
     private static var s_securityManager:SecurityManager? = nil
     
     public static var shared:SecurityManager {
@@ -25,7 +28,7 @@ class SecurityManager {
     
     
     func downloadPasswordsFile() {
-        
+        Alamofire.request(SecurityManager.TOP_100_PASSWORD_URL)
     }
     
     
