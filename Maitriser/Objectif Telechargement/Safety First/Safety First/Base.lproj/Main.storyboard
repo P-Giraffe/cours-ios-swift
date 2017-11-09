@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AdI-d5-ebM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AdI-d5-ebM">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-oR-X3U">
-                                <rect key="frame" x="10" y="64" width="300" height="148"/>
+                                <rect key="frame" x="10" y="64" width="300" height="182"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-JF-2v2">
                                         <rect key="frame" x="0.0" y="0.0" width="48.5" height="24"/>
@@ -101,10 +101,19 @@
                                             <action selector="copyPasswordToClipboard:" destination="CxU-Ju-Y27" eventType="touchUpInside" id="CHi-7w-1p1"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-Rv-DGH">
+                                        <rect key="frame" x="0.0" y="152" width="300" height="30"/>
+                                        <color key="tintColor" red="1" green="0.61110638592358124" blue="0.17900509734109249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Risque de sécurité"/>
+                                        <connections>
+                                            <action selector="securityWarningButtonTouched" destination="CxU-Ju-Y27" eventType="touchUpInside" id="knA-iO-99P"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4hV-KX-rwP" firstAttribute="centerX" secondItem="cGy-oR-X3U" secondAttribute="centerX" id="Il1-FS-eyw"/>
                                     <constraint firstItem="nC3-vX-dVl" firstAttribute="centerX" secondItem="cGy-oR-X3U" secondAttribute="centerX" id="gdt-aJ-HxI"/>
+                                    <constraint firstItem="pCC-Rv-DGH" firstAttribute="centerX" secondItem="cGy-oR-X3U" secondAttribute="centerX" id="svO-sc-18A"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -119,6 +128,7 @@
                     <connections>
                         <outlet property="ui_loginLabel" destination="AUe-JF-2v2" id="JQW-Kc-DoC"/>
                         <outlet property="ui_passwordLabel" destination="YQQ-yb-TfX" id="lNj-D5-HY5"/>
+                        <outlet property="ui_securityWarningButton" destination="pCC-Rv-DGH" id="uzY-S4-rf0"/>
                         <outlet property="ui_urlLabel" destination="ejX-In-a3j" id="2Vz-Js-hcK"/>
                     </connections>
                 </viewController>

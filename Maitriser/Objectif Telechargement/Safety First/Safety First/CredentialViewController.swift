@@ -19,6 +19,7 @@ class CredentialViewController: UIViewController {
     @IBOutlet weak var ui_loginLabel: UILabel!
     @IBOutlet weak var ui_passwordLabel: UILabel!
     @IBOutlet weak var ui_urlLabel: UILabel!
+    @IBOutlet weak var ui_securityWarningButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         displayBasicData()
@@ -53,6 +54,8 @@ class CredentialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func securityWarningButtonTouched() {
+    }
+    
 }
 
