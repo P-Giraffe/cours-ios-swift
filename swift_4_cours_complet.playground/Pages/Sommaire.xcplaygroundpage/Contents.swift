@@ -16,6 +16,7 @@
  * [Héritage](Heritage)
  * [Gestion des erreurs](Gestion_erreurs)
  * [Extensions](Extensions)
+ * [Structures](Structures)
  */
 
 
