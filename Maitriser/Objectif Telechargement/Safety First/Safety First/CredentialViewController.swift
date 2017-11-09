@@ -61,6 +61,13 @@ class CredentialViewController: UIViewController {
     }
 
     @IBAction func securityWarningButtonTouched() {
+        if let cred = _credentials,
+            cred.isPasswordSafe.result == false,
+            let message = cred.isPasswordSafe.message {
+            let alertController = UIAlertController(title: "Mot de passe non sécurisé", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
 }
