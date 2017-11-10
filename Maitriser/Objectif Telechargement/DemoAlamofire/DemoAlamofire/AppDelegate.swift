@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Alamofire
+//  DemoAlamofire
 //
 //  Created by Maxime Britto on 10/11/2017.
 //  Copyright © 2017 Maxime Britto. All rights reserved.
