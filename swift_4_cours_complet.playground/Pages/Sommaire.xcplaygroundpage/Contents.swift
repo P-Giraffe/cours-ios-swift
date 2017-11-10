@@ -17,6 +17,7 @@
  * [Gestion des erreurs](Gestion_erreurs)
  * [Extensions](Extensions)
  * [Structures](Structures)
+ * [Singleton](Singleton)
  */
 
 
