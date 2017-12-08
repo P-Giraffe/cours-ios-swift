@@ -44,7 +44,16 @@ class GameController {
     }
     
     func checkGuessedValue(_ value:Int) {
+        guard let secretNumber = _secretNumber else { return }
+        
         _lastGuessedValue = value
+        if value != secretNumber {
+            if value < secretNumber {
+                _lowBoundary = max(_lowBoundary, value)
+            } else {
+                _highBoundary = min(_highBoundary, value)
+            }
+        }
     }
     
     
