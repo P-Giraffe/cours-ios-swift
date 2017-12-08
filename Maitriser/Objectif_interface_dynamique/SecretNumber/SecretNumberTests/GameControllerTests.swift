@@ -1,6 +1,6 @@
 //
-//  SecretNumberTests.swift
-//  SecretNumberTests
+//  GameControllerTests.swift
+//  GameControllerTests
 //
 //  Created by Maxime Britto on 08/12/2017.
 //  Copyright © 2017 Maxime Britto. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import SecretNumber
 
-class SecretNumberTests: XCTestCase {
+class GameControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,14 @@ class SecretNumberTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testGameStatus() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        let gameController = GameController()
+        XCTAssertFalse(gameController.isGameInProgress)
+        gameController.startNewGame()
+        XCTAssertTrue(gameController.isGameInProgress)
+        
     }
     
 }
