@@ -9,8 +9,20 @@
 import Foundation
 
 class GameController {
+    static let MIN_VALUE = 0
+    static let MAX_VALUE = 100
     private var _secretNumber:Int?
     private var _lastGuessedValue:Int?
+    private var _lowBoundary:Int = GameController.MIN_VALUE
+    private var _highBoundary:Int = GameController.MAX_VALUE
+    
+    var lowBoundary: Int {
+        return _lowBoundary
+    }
+    
+    var highBoundary: Int {
+        return _highBoundary
+    }
     
     var isGameInProgress: Bool {
         guard let secretNumber = _secretNumber else { return false }

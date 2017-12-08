@@ -36,6 +36,29 @@ class GameControllerTests: XCTestCase {
         XCTAssertFalse(gameController.isGameInProgress)
     }
     
+    func testBoundaries() {
+        let gameController = GameController()
+        gameController.startNewGame(withSecretNumber: 60)
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary)
+        XCTAssertEqual(GameController.MAX_VALUE, gameController.highBoundary)
+        
+        gameController.checkGuessedValue(30)
+        XCTAssertEqual(30, gameController.lowBoundary)
+        XCTAssertEqual(GameController.MAX_VALUE, gameController.highBoundary)
+        
+        gameController.checkGuessedValue(70)
+        XCTAssertEqual(30, gameController.lowBoundary)
+        XCTAssertEqual(70, gameController.highBoundary)
+        
+        gameController.checkGuessedValue(55)
+        XCTAssertEqual(55, gameController.lowBoundary)
+        XCTAssertEqual(70, gameController.highBoundary)
+        
+        gameController.checkGuessedValue(65)
+        XCTAssertEqual(55, gameController.lowBoundary)
+        XCTAssertEqual(65, gameController.highBoundary)
+    }
+    
 }
 
 
