@@ -49,7 +49,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-NQ-6ZN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-NQ-6ZN" userLabel="Boundary Zone">
                                 <rect key="frame" x="16" y="113" width="343" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ag-rD-1zn">
@@ -105,6 +105,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cs_boundaryZoneLeading" destination="jdj-OI-lvF" id="t5D-W9-yc7"/>
+                        <outlet property="cs_boundaryZoneTrailing" destination="PPp-Ls-FLp" id="WEI-23-dLP"/>
                         <outlet property="ui_gameStatusLabel" destination="5hv-BZ-XcO" id="SXA-jg-9lF"/>
                         <outlet property="ui_guessedValueField" destination="qPM-h6-C5Z" id="NxD-lk-QCR"/>
                         <outlet property="ui_highBoundaryLabel" destination="9ag-rD-1zn" id="Xkt-CW-Swt"/>

@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
     @IBOutlet weak var ui_lowBoundaryLabel: UILabel!
     
+    @IBOutlet weak var cs_boundaryZoneLeading: NSLayoutConstraint!
+    @IBOutlet weak var cs_boundaryZoneTrailing: NSLayoutConstraint!
     @IBOutlet weak var ui_highBoundaryLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class ViewController: UIViewController {
             ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
             ui_guessedValueField.isHidden = false
             ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
+            cs_boundaryZoneLeading.constant = 16 + CGFloat(_gameController.lowBoundary)
             ui_highBoundaryLabel.text = String(_gameController.highBoundary)
         } else {
             ui_gameStatusLabel.text = nil
