@@ -13,18 +13,27 @@ class GameController {
     private var _lastGuessedValue:Int?
     
     var isGameInProgress: Bool {
-        return true
+        guard let secretNumber = _secretNumber else { return false }
+        
+        return _lastGuessedValue == nil || _lastGuessedValue! != secretNumber
     }
     
     var secretNumber: Int? {
         return _secretNumber
     }
     
-    func startNewGame() {
-        
+    func startNewGame(withSecretNumber secretNumber:Int?=nil) {
+        if secretNumber != nil {
+            _secretNumber = secretNumber
+        } else {
+            _secretNumber = 50
+        }
+        _lastGuessedValue = nil
     }
     
     func checkGuessedValue(_ value:Int) {
-        
+        _lastGuessedValue = value
     }
+    
+    
 }

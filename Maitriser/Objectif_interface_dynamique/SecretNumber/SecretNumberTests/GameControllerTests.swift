@@ -26,9 +26,14 @@ class GameControllerTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let gameController = GameController()
         XCTAssertFalse(gameController.isGameInProgress)
-        gameController.startNewGame()
+        gameController.startNewGame(withSecretNumber: 40)
         XCTAssertTrue(gameController.isGameInProgress)
-        
+        gameController.checkGuessedValue(20)
+        XCTAssertTrue(gameController.isGameInProgress)
+        gameController.checkGuessedValue(60)
+        XCTAssertTrue(gameController.isGameInProgress)
+        gameController.checkGuessedValue(40)
+        XCTAssertFalse(gameController.isGameInProgress)
     }
     
 }
