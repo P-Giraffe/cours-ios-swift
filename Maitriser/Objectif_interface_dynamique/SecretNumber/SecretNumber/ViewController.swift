@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     let _gameController = GameController()
     @IBOutlet weak var ui_guessedValueField: UITextField!
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
+    @IBOutlet weak var ui_lowBoundaryLabel: UILabel!
     
+    @IBOutlet weak var ui_highBoundaryLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateDisplay()
@@ -39,6 +41,8 @@ class ViewController: UIViewController {
         if _gameController.isGameInProgress {
             ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
             ui_guessedValueField.isHidden = false
+            ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
+            ui_highBoundaryLabel.text = String(_gameController.highBoundary)
         } else {
             ui_gameStatusLabel.text = nil
             ui_guessedValueField.isHidden = true
