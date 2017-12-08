@@ -9,13 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    static let BORDER_MARGIN:CGFloat = 16
     let _gameController = GameController()
     @IBOutlet weak var ui_guessedValueField: UITextField!
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
     @IBOutlet weak var ui_lowBoundaryLabel: UILabel!
     
-    @IBOutlet weak var cs_boundaryZoneLeading: NSLayoutConstraint!
-    @IBOutlet weak var cs_boundaryZoneTrailing: NSLayoutConstraint!
+    @IBOutlet weak var cs_boundaryZoneLeading: NSLayoutConstraint! {
+        didSet {
+            cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN
+        }
+    }
+    @IBOutlet weak var cs_boundaryZoneTrailing: NSLayoutConstraint! {
+        didSet {
+            cs_boundaryZoneTrailing.constant = ViewController.BORDER_MARGIN
+        }
+    }
     @IBOutlet weak var ui_highBoundaryLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +53,7 @@ class ViewController: UIViewController {
             ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
             ui_guessedValueField.isHidden = false
             ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
-            cs_boundaryZoneLeading.constant = 16 + CGFloat(_gameController.lowBoundary)
+            cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(_gameController.lowBoundary)
             ui_highBoundaryLabel.text = String(_gameController.highBoundary)
         } else {
             ui_gameStatusLabel.text = nil
