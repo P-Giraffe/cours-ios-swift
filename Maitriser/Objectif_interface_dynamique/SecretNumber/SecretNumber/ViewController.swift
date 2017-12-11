@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
     @IBOutlet weak var ui_lowBoundaryLabel: UILabel!
     
+    @IBOutlet weak var ui_checkValueButton: UIButton!
     @IBOutlet weak var cs_boundaryZoneLeading: NSLayoutConstraint! {
         didSet {
             cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
         if let guessText = ui_guessedValueField.text,
             let guessInt = Int(guessText) {
             _gameController.checkGuessedValue(guessInt)
+            ui_guessedValueField.text = nil
             updateDisplay()
         }
     }
@@ -62,13 +64,18 @@ class ViewController: UIViewController {
             let gameRangeToScreenRatio = barWidth / CGFloat(GameController.MAX_VALUE - GameController.MIN_VALUE)
             ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
             ui_guessedValueField.isHidden = false
+            ui_checkValueButton.isHidden = false
+            
             ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
+            ui_highBoundaryLabel.text = String(_gameController.highBoundary)
+            
             cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(_gameController.lowBoundary) * gameRangeToScreenRatio
             cs_boundaryZoneTrailing.constant = ViewController.BORDER_MARGIN + CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * gameRangeToScreenRatio
-            ui_highBoundaryLabel.text = String(_gameController.highBoundary)
+            
         } else {
             ui_gameStatusLabel.text = nil
             ui_guessedValueField.isHidden = true
+            ui_checkValueButton.isHidden = true
         }
     }
     
