@@ -50,10 +50,16 @@ class ViewController: UIViewController {
     
     func updateDisplay() {
         if _gameController.isGameInProgress {
+            let barWidth:CGFloat = self.view.bounds.width
+                - self.view.safeAreaInsets.left
+                - self.view.safeAreaInsets.right
+                - 2 * ViewController.BORDER_MARGIN
+            let gameRangeToScreenRatio = barWidth / CGFloat(GameController.MAX_VALUE - GameController.MIN_VALUE)
             ui_gameStatusLabel.text = "Essayez de trouver le nombre mystère"
             ui_guessedValueField.isHidden = false
             ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
-            cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(_gameController.lowBoundary)
+            cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(_gameController.lowBoundary) * gameRangeToScreenRatio
+            cs_boundaryZoneTrailing.constant = ViewController.BORDER_MARGIN + CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * gameRangeToScreenRatio
             ui_highBoundaryLabel.text = String(_gameController.highBoundary)
         } else {
             ui_gameStatusLabel.text = nil
