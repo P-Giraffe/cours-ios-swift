@@ -107,6 +107,7 @@
                     <connections>
                         <outlet property="cs_boundaryZoneLeading" destination="jdj-OI-lvF" id="t5D-W9-yc7"/>
                         <outlet property="cs_boundaryZoneTrailing" destination="PPp-Ls-FLp" id="WEI-23-dLP"/>
+                        <outlet property="ui_boundaryZone" destination="KtJ-NQ-6ZN" id="0bH-4M-u10"/>
                         <outlet property="ui_checkValueButton" destination="btJ-Cm-Psr" id="9cl-RO-IYo"/>
                         <outlet property="ui_gameStatusLabel" destination="5hv-BZ-XcO" id="SXA-jg-9lF"/>
                         <outlet property="ui_guessedValueField" destination="qPM-h6-C5Z" id="NxD-lk-QCR"/>
