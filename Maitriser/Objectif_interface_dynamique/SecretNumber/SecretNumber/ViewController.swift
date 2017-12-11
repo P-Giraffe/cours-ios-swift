@@ -48,6 +48,11 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillLayoutSubviews() {
+        updateDisplay()
+        super.viewWillLayoutSubviews()
+    }
+    
     func updateDisplay() {
         if _gameController.isGameInProgress {
             let barWidth:CGFloat = self.view.bounds.width
