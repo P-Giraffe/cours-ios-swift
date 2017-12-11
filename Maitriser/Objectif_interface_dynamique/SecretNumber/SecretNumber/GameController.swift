@@ -38,7 +38,8 @@ class GameController {
         if secretNumber != nil {
             _secretNumber = secretNumber
         } else {
-            _secretNumber = 50
+            _secretNumber = Int(withRandomNumberBetween: GameController.MIN_VALUE, and: GameController.MAX_VALUE)
+            print(_secretNumber)
         }
         _lastGuessedValue = nil
     }
