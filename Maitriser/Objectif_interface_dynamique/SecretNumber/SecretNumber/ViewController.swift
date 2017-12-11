@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     static let BORDER_MARGIN:CGFloat = 16
-    let _gameRangeToScreenRatio:CGFloat = 1
+    var _gameRangeToScreenRatio:CGFloat = 1
     let _gameController = GameController()
     @IBOutlet weak var ui_guessedValueField: UITextField!
     @IBOutlet weak var ui_gameStatusLabel: UILabel!
