@@ -69,15 +69,14 @@ class ViewController: UIViewController {
             
             ui_lowBoundaryLabel.text = String(_gameController.lowBoundary)
             ui_highBoundaryLabel.text = String(_gameController.highBoundary)
-            self.view.layoutIfNeeded()
-            
-            
+
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.layoutIfNeeded()
+            })
+
             cs_boundaryZoneLeading.constant = ViewController.BORDER_MARGIN + CGFloat(_gameController.lowBoundary) * _gameRangeToScreenRatio
             cs_boundaryZoneTrailing.constant = ViewController.BORDER_MARGIN + CGFloat(GameController.MAX_VALUE - _gameController.highBoundary) * _gameRangeToScreenRatio
             
-//            UIView.animate(withDuration: 0.4, animations: {
-//
-//            })
             UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.45, initialSpringVelocity: 10, options: [], animations: {
                 self.view.layoutIfNeeded()
             }, completion: nil)
