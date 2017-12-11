@@ -42,6 +42,8 @@ class GameController {
             print(_secretNumber)
         }
         _lastGuessedValue = nil
+        _lowBoundary = GameController.MIN_VALUE
+        _highBoundary = GameController.MAX_VALUE
     }
     
     func checkGuessedValue(_ value:Int) {

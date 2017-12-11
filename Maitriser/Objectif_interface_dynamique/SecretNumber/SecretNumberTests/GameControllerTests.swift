@@ -57,6 +57,10 @@ class GameControllerTests: XCTestCase {
         gameController.checkGuessedValue(65)
         XCTAssertEqual(55, gameController.lowBoundary)
         XCTAssertEqual(65, gameController.highBoundary)
+        
+        gameController.startNewGame()
+        XCTAssertEqual(GameController.MIN_VALUE, gameController.lowBoundary, "After a new game, boundaries should have been reinitialized")
+        XCTAssertEqual(GameController.MAX_VALUE, gameController.highBoundary, "After a new game, boundaries should have been reinitialized")
     }
     
 }
