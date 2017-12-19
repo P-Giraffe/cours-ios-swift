@@ -13,7 +13,18 @@ class Player {
     }
     private var _id:Int
     private var _name:String
-    private var _score:Int = 0
+    private var _score:Int = 0 {
+        willSet(futurScore) {
+            print("Le score va changer depuis \(_score) vers \(futurScore)")
+        }
+        
+        didSet(ancienScore) {
+            print("Le score vient de changer pour \(_score) depuis \(ancienScore)")
+            if _score > 10 {
+                _score = ancienScore
+            }
+        }
+    }
     private var _level:Int = 1
     
     var name:String {
