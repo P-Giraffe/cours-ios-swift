@@ -17,8 +17,6 @@ import Foundation
 let racine = sqrt(9.0)
 let bitParOctets = pow(2, 8)
 
-
-
 /*:
  [< Sommaire](Sommaire)
  */

@@ -9,5 +9,6 @@
  * [NSString](NSString)
  * [NSRange](NSRange)
  * [Analyse du langage naturel](NSLinguisticTagger)
+ * [Génération de nombre aléatoire](Random_number)
  */
 

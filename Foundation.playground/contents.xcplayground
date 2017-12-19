@@ -7,5 +7,6 @@
         <page name='NSString'/>
         <page name='NSRange'/>
         <page name='NSLinguisticTagger'/>
+        <page name='Random_number'/>
     </pages>
 </playground>
