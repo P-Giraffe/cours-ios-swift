@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var cs_demoViewHeight: NSLayoutConstraint!
     @IBAction func animate() {
         cs_demoViewHeight.constant = 300
+        UIView.animate(withDuration: 0.75) {
+            self.view.layoutIfNeeded()
+        }
+        
         /*
         UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveEaseIn], animations: {
             self.ui_demoView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
