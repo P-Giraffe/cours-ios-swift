@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var ui_demoView: UIView!
+    @IBOutlet weak var cs_demoViewLeading: NSLayoutConstraint!
     
+    @IBOutlet weak var cs_demoViewHeight: NSLayoutConstraint!
     @IBAction func animate() {
+        cs_demoViewHeight.constant = 300
+        /*
         UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveEaseIn], animations: {
             self.ui_demoView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
             self.ui_demoView.alpha = 0.25
@@ -21,7 +25,7 @@ class ViewController: UIViewController {
                 self.ui_demoView.center = self.view.center
             })
         }
-        
+        */
         
     }
     override func viewDidLoad() {
