@@ -18,6 +18,7 @@
  * [Extensions](Extensions)
  * [Structures](Structures)
  * [Singleton](Singleton)
+ * [Fonctions mathématiques](Maths)
  */
 
 

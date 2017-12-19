@@ -15,5 +15,7 @@
         <page name='Gestion_erreurs'/>
         <page name='Extensions'/>
         <page name='Structures'/>
+        <page name='Singleton'/>
+        <page name='Maths'/>
     </pages>
 </playground>
