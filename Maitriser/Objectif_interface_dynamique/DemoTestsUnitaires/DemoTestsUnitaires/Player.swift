@@ -17,6 +17,7 @@ class Player {
     
     func changeScore(newScore:Int) {
         _score = newScore
+        updateLevel()
     }
     
     private func updateLevel() {
@@ -24,8 +25,10 @@ class Player {
             _level = 1
         } else if _score < 20 {
             _level = 2
-        } else {
+        } else if _score < 30 {
             _level = 3
+        } else {
+            _level = 4
         }
     }
 }

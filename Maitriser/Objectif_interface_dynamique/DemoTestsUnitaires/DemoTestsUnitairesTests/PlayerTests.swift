@@ -21,21 +21,18 @@ class PlayerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testUpdateLevelAutomatically() {
         let player = Player()
         XCTAssertEqual(player.getLevel(), 1)
         player.changeScore(newScore: 15)
         XCTAssertEqual(player.getLevel(), 2)
-        
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+        player.changeScore(newScore: 25)
+        XCTAssertEqual(player.getLevel(), 3)
+        player.changeScore(newScore: 12)
+        XCTAssertEqual(player.getLevel(), 2)
+        player.changeScore(newScore: 35)
+        XCTAssertEqual(player.getLevel(), 4)
+        player.changeScore(newScore: 350)
+        XCTAssertEqual(player.getLevel(), 4)
+    }    
 }
