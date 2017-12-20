@@ -15,11 +15,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cs_demoViewHeight: NSLayoutConstraint!
     @IBAction func animate() {
+        UIView.transition(with: ui_demoView, duration: 0.75, options: [.transitionCrossDissolve], animations: {
+            self.ui_demoView.isHidden = true
+        }, completion: nil)
+        
+        /*
         cs_demoViewHeight.constant = 300
         UIView.animate(withDuration: 1.00, delay: 0, usingSpringWithDamping: 0.35, initialSpringVelocity: 30, options: [], animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-        
+        */
         
         /*
         UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveEaseIn], animations: {
