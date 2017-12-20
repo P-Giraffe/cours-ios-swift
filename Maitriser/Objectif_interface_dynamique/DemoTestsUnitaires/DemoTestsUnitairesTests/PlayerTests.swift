@@ -1,5 +1,5 @@
 //
-//  DemoTestsUnitairesTests.swift
+//  PlayerTests.swift
 //  DemoTestsUnitairesTests
 //
 //  Created by Maxime Britto on 20/12/2017.
@@ -7,8 +7,9 @@
 //
 
 import XCTest
+@testable import DemoTestsUnitaires
 
-class DemoTestsUnitairesTests: XCTestCase {
+class PlayerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,6 +22,11 @@ class DemoTestsUnitairesTests: XCTestCase {
     }
     
     func testExample() {
+        let player = Player()
+        XCTAssertEqual(player.getLevel(), 1)
+        player.changeScore(newScore: 15)
+        XCTAssertEqual(player.getLevel(), 2)
+        
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
