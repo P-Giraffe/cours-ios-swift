@@ -14,6 +14,22 @@ Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false, block: { (timer:Time
 })
 print("Après le timer")
 
+/*:
+ ### Escaping closures
+ */
+func accueillirEtConfirmer(messageAccueil:String, confirmer:@escaping (String)->Void) {
+    print(messageAccueil)
+    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (_) in
+        confirmer("accueil effectué")
+    }
+    
+}
+
+accueillirEtConfirmer(messageAccueil: "Bienvenue") { (messageConfirmation) in
+    print("Confirmation de message recu : " + messageConfirmation)
+}
+
+
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 
