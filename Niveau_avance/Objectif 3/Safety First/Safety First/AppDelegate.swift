@@ -21,13 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureNotifications()
         return true
     }
-    
-    func configureNotifications() {
-        let notifCenter = UNUserNotificationCenter.current()
-        notifCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            print("Notification auth response : \(granted). Error : \(String(describing: error))")
-        }
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,5 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func configureNotifications() {
+        let notifCenter = UNUserNotificationCenter.current()
+        notifCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            print("Notification auth response : \(granted). Error : \(String(describing: error))")
+        }
+        notifCenter.delegate = self
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert,.sound, .badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    
 }
 
