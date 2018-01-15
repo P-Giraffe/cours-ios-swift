@@ -15,6 +15,7 @@
 		F84AF4AF1F5ECA3300769F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84AF4AD1F5ECA3300769F21 /* LaunchScreen.storyboard */; };
 		F84AF4BB1F5ED54F00769F21 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BA1F5ED54F00769F21 /* Credentials.swift */; };
 		F84AF4BD1F5EDCA500769F21 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */; };
+		F86CD451200CFF6200D135CC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F86CD450200CFBF800D135CC /* logo.png */; };
 		F8D24E141F616EF000323D7A /* CredentialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D24E131F616EF000323D7A /* CredentialListViewController.swift */; };
 		F8D24E161F61770400323D7A /* EditCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D24E151F61770400323D7A /* EditCredentialViewController.swift */; };
 		F8FD32C11FB49771005F9EA7 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FD32C01FB49771005F9EA7 /* SecurityManager.swift */; };
@@ -32,6 +33,7 @@
 		F84AF4B01F5ECA3300769F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F84AF4BA1F5ED54F00769F21 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		F84AF4BC1F5EDCA500769F21 /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		F86CD450200CFBF800D135CC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F8D24E131F616EF000323D7A /* CredentialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialListViewController.swift; sourceTree = "<group>"; };
 		F8D24E151F61770400323D7A /* EditCredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCredentialViewController.swift; sourceTree = "<group>"; };
 		F8FD32C01FB49771005F9EA7 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityManager.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		F84AF4A31F5ECA3300769F21 /* Safety First */ = {
 			isa = PBXGroup;
 			children = (
+				F86CD450200CFBF800D135CC /* logo.png */,
 				F84AF4B91F5ED53600769F21 /* Model */,
 				F84AF4A41F5ECA3300769F21 /* AppDelegate.swift */,
 				F84AF4A61F5ECA3300769F21 /* CredentialViewController.swift */,
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86CD451200CFF6200D135CC /* logo.png in Resources */,
 				F84AF4AF1F5ECA3300769F21 /* LaunchScreen.storyboard in Resources */,
 				F84AF4AC1F5ECA3300769F21 /* Assets.xcassets in Resources */,
 				F84AF4AA1F5ECA3300769F21 /* Main.storyboard in Resources */,

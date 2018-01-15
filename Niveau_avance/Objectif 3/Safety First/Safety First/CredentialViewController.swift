@@ -46,6 +46,12 @@ class CredentialViewController: UIViewController {
         content.title = "Attention"
         content.subtitle = "Risque de sécurité"
         content.body = "Vous utilisez un mot de passe non sécurisé"
+        content.sound = UNNotificationSound.default()
+        
+        if let imageUrl = Bundle.main.url(forResource: "logo", withExtension: "png"),
+            let imgAttachment = try? UNNotificationAttachment(identifier: "logo", url: imageUrl, options: nil) {
+            content.attachments = [imgAttachment]
+        }
         
         //Declencheur
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
