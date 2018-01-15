@@ -17,6 +17,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Super notification"
+        content.body = "Ceci est une super notif, vous devriez lancer l'app pour en savoir plus!"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "maNotif", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     override func viewDidLoad() {
