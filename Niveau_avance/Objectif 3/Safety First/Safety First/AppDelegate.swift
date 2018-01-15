@@ -63,7 +63,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print(response.notification.request.content.body)
         if let credTitle = response.notification.request.content.userInfo["cred-title"] as? String,
-            let cred = CredentialsManager().credential(withTitle: credTitle) {
+            let cred = CredentialsManager().credential(withTitle: credTitle),
+            let navController = window?.rootViewController as? UINavigationController,
+            let detailVC = navController.storyboard?.instantiateViewController(withIdentifier: "CredentialViewController") as? CredentialViewController {
+            
+            detailVC.setCredentials(cred)
+            navController.show(detailVC, sender: nil)
+            
             print(credTitle)
         }
         completionHandler()
