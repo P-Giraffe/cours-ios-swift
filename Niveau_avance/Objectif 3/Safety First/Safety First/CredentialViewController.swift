@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 class CredentialViewController: UIViewController {
     private var _credentials:Credentials?
@@ -40,7 +41,20 @@ class CredentialViewController: UIViewController {
     }
     
     func scheduleWarningNotification(forCredential cred:Credentials) {
+        //Contenu
+        let content = UNMutableNotificationContent()
+        content.title = "Attention"
+        content.subtitle = "Risque de sécurité"
+        content.body = "Vous utilisez un mot de passe non sécurisé"
         
+        //Declencheur
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        //Requete
+        let request = UNNotificationRequest(identifier: cred.title, content: content, trigger: trigger)
+        
+        //Confier la requete au centre de notification
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     @IBAction func displayPassword(_ sender: Any) {
