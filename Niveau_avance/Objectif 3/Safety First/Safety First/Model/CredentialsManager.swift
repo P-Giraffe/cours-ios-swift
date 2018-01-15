@@ -50,6 +50,10 @@ class CredentialsManager {
             }
         }
     }
+    
+    func credential(withTitle title:String) -> Credentials? {
+        return _credentialList.filter("_title = %@", title).first
+    }
 }
 
 

@@ -61,7 +61,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
+        print(response.notification.request.content.body)
+        if let credTitle = response.notification.request.content.userInfo["cred-title"] as? String,
+            let cred = CredentialsManager().credential(withTitle: credTitle) {
+            print(credTitle)
+        }
+        completionHandler()
     }
     
     

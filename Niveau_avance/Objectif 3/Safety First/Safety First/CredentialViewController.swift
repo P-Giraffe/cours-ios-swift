@@ -52,6 +52,7 @@ class CredentialViewController: UIViewController {
             let imgAttachment = try? UNNotificationAttachment(identifier: "logo", url: imageUrl, options: nil) {
             content.attachments = [imgAttachment]
         }
+        content.userInfo = ["cred-title":cred.title]
         
         //Declencheur
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
