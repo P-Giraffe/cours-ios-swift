@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Super notification"
         content.body = "Ceci est une super notif, vous devriez lancer l'app pour en savoir plus!"
+        content.userInfo["id-objet"] = 525
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         
