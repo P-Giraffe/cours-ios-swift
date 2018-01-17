@@ -14,10 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
+        let delete = UNNotificationAction(identifier: "delete-action", title: "Effacer", options: .destructive)
+        let repeatLater = UNNotificationAction(identifier: "repeat-action", title: "Plus tard", options: [])
+        let cat1 = UNNotificationCategory(identifier: "cat1", actions: [delete, repeatLater], intentIdentifiers: [], options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories([cat1])
         return true
     }
     
@@ -28,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print(response.notification.request.content.userInfo)
+        print(response.actionIdentifier)
         completionHandler()
     }
 
