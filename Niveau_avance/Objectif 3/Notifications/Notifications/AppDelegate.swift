@@ -15,14 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Delegation
         UNUserNotificationCenter.current().delegate = self
+        
+        //Notifications et categories
         let delete = UNNotificationAction(identifier: "delete-action", title: "Effacer", options: .destructive)
         let repeatLater = UNNotificationAction(identifier: "repeat-action", title: "Plus tard", options: [])
         let cat1 = UNNotificationCategory(identifier: "cat1", actions: [delete, repeatLater], intentIdentifiers: [], options: [])
-        
         UNUserNotificationCenter.current().setNotificationCategories([cat1])
+        
+        //Push
+        application.registerForRemoteNotifications()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print((deviceToken as NSData).description)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print(error)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
