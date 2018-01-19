@@ -23,6 +23,11 @@ class ViewController: UIViewController {
         content.userInfo["id-objet"] = 525
         content.categoryIdentifier = "cat1"
         
+        if let imageUrl = Bundle.main.url(forResource: "logo", withExtension: "png"),
+            let attachment = try? UNNotificationAttachment(identifier: "logo", url: imageUrl, options: nil) {
+            content.attachments = [attachment]
+        }
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         
         let request = UNNotificationRequest(identifier: "maNotif", content: content, trigger: trigger)

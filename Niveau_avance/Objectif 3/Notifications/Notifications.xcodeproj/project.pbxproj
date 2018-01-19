@@ -12,6 +12,7 @@
 		F86CD464200D12B200D135CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CD462200D12B200D135CC /* Main.storyboard */; };
 		F86CD466200D12B200D135CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86CD465200D12B200D135CC /* Assets.xcassets */; };
 		F86CD469200D12B200D135CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86CD467200D12B200D135CC /* LaunchScreen.storyboard */; };
+		F8B816D920122E7300848D06 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B816D720122E4C00848D06 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F86CD465200D12B200D135CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86CD468200D12B200D135CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86CD46A200D12B200D135CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B816D720122E4C00848D06 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		F86CD45D200D12B100D135CC /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				F8B816D720122E4C00848D06 /* logo.png */,
 				F81C0A99200F5E5B008B556A /* Notifications.entitlements */,
 				F86CD45E200D12B100D135CC /* AppDelegate.swift */,
 				F86CD460200D12B100D135CC /* ViewController.swift */,
@@ -130,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B816D920122E7300848D06 /* logo.png in Resources */,
 				F86CD469200D12B200D135CC /* LaunchScreen.storyboard in Resources */,
 				F86CD466200D12B200D135CC /* Assets.xcassets in Resources */,
 				F86CD464200D12B200D135CC /* Main.storyboard in Resources */,
