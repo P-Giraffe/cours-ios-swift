@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         content.body = "Ceci est une super notif, vous devriez lancer l'app pour en savoir plus!"
         content.userInfo["id-objet"] = 525
         content.categoryIdentifier = "cat1"
+        content.sound = UNNotificationSound.default()
+        content.badge = 1
         
         if let imageUrl = Bundle.main.url(forResource: "logo", withExtension: "png"),
             let attachment = try? UNNotificationAttachment(identifier: "logo", url: imageUrl, options: nil) {
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     override func didReceiveMemoryWarning() {
