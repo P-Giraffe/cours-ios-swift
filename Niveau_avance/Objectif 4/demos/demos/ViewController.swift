@@ -24,6 +24,10 @@ class ViewController: UIViewController {
     
     func configureCaptureSession() {
         // 1 - Configurer les entrées
+        if let camera = AVCaptureDevice.default(for: AVMediaType.video),
+           let cameraFeed = try? AVCaptureDeviceInput(device: camera) {
+            captureSession.addInput(cameraFeed)
+        }
         
         // 2 - Configurer les sorties
         
