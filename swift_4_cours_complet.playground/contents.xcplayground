@@ -17,5 +17,7 @@
         <page name='Structures'/>
         <page name='Singleton'/>
         <page name='Maths'/>
+        <page name='Lazy'/>
+        <page name='Intervalles'/>
     </pages>
 </playground>

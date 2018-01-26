@@ -19,6 +19,8 @@
  * [Structures](Structures)
  * [Singleton](Singleton)
  * [Fonctions mathématiques](Maths)
+ * [Propriétés Lazy](Lazy)
+ * [Intervalles (Rangel)](Intervalles)
  */
 
 
