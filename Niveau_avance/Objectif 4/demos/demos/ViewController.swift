@@ -8,10 +8,20 @@
 
 import UIKit
 import AVFoundation
+import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var ui_preview: UIView!
     let captureSession = AVCaptureSession()
+    lazy var imageRecognitionRequest: VNRequest = {
+        let model = try! VNCoreMLModel(for: SqueezeNet().model)
+        let request = VNCoreMLRequest(model: model, completionHandler:self.imageRecognitionHandler)
+        return request
+    }()
+    
+    func imageRecognitionHandler(request:VNRequest, error:Error?) {
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
