@@ -20,7 +20,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     
     lazy var imageRecognitionRequest: VNRequest = {
-        let model = try! VNCoreMLModel(for: SqueezeNet().model)
+        let model = try! VNCoreMLModel(for: Inceptionv3().model)
         let request = VNCoreMLRequest(model: model, completionHandler:self.imageRecognitionHandler)
         return request
     }()

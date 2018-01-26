@@ -12,7 +12,7 @@
 		F879204D201B35AA007877F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F879204B201B35AA007877F3 /* Main.storyboard */; };
 		F879204F201B35AA007877F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F879204E201B35AA007877F3 /* Assets.xcassets */; };
 		F8792052201B35AA007877F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8792050201B35AA007877F3 /* LaunchScreen.storyboard */; };
-		F879205A201B701A007877F3 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F8792059201B701A007877F3 /* SqueezeNet.mlmodel */; };
+		F879205E201B7D7D007877F3 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F879205D201B7D7D007877F3 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		F879204E201B35AA007877F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8792051201B35AA007877F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8792053201B35AA007877F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8792059201B701A007877F3 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		F879205D201B7D7D007877F3 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		F8792046201B35AA007877F3 /* demos */ = {
 			isa = PBXGroup;
 			children = (
-				F8792059201B701A007877F3 /* SqueezeNet.mlmodel */,
+				F879205D201B7D7D007877F3 /* Inceptionv3.mlmodel */,
 				F8792047201B35AA007877F3 /* AppDelegate.swift */,
 				F8792049201B35AA007877F3 /* ViewController.swift */,
 				F879204B201B35AA007877F3 /* Main.storyboard */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F879204A201B35AA007877F3 /* ViewController.swift in Sources */,
-				F879205A201B701A007877F3 /* SqueezeNet.mlmodel in Sources */,
+				F879205E201B7D7D007877F3 /* Inceptionv3.mlmodel in Sources */,
 				F8792048201B35AA007877F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
