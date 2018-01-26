@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         }
         
         // 2 - Configurer les sorties
+        let outputFeed = AVCaptureVideoDataOutput()
+        captureSession.addOutput(outputFeed)
         
         // 3 - Configurer l'apercu
         
