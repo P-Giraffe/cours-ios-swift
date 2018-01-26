@@ -11,8 +11,14 @@ import AVFoundation
 import Vision
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    
+    @IBOutlet weak var ui_titleLabel: UILabel!
+    @IBOutlet weak var ui_infoLabel: UILabel!
     @IBOutlet weak var ui_preview: UIView!
     let captureSession = AVCaptureSession()
+    
+    
     lazy var imageRecognitionRequest: VNRequest = {
         let model = try! VNCoreMLModel(for: SqueezeNet().model)
         let request = VNCoreMLRequest(model: model, completionHandler:self.imageRecognitionHandler)
@@ -20,7 +26,19 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }()
     
     func imageRecognitionHandler(request:VNRequest, error:Error?) {
+        guard let observations = request.results as? [VNClassificationObservation],
+              let bestGuess = observations.first else {
+            return
+        }
         
+        DispatchQueue.main.async {
+            if bestGuess.confidence > 0.6 {
+                self.ui_titleLabel.text = bestGuess.identifier
+                self.ui_infoLabel.text = "Probabilité : \(bestGuess.confidence)"
+            } else {
+                self.ui_infoLabel.text = "Recherche en cours..."
+            }
+        }
     }
 
     override func viewDidLoad() {

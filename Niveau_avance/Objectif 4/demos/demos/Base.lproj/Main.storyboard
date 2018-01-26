@@ -32,19 +32,38 @@
                                     <action selector="startSessionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWd-ol-k3p"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPj-Y0-O89" userLabel="Title">
+                                <rect key="frame" x="8" y="391" width="359" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0t-vH-pfw" userLabel="status">
+                                <rect key="frame" x="168.5" y="420" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="t0t-vH-pfw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="74f-5K-ZxF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nAG-fa-j7H" secondAttribute="trailing" constant="16" id="C2C-8d-Tzf"/>
                             <constraint firstItem="nAG-fa-j7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F16-Lm-Psg"/>
                             <constraint firstItem="HqB-Yw-GRX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G0s-q0-yvm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NPj-Y0-O89" secondAttribute="trailing" constant="8" id="RgC-mL-nfD"/>
                             <constraint firstItem="nAG-fa-j7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UHV-Xr-dgh"/>
+                            <constraint firstItem="NPj-Y0-O89" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hf4-He-uHb"/>
+                            <constraint firstItem="NPj-Y0-O89" firstAttribute="top" secondItem="HqB-Yw-GRX" secondAttribute="bottom" constant="17" id="ibY-Kk-qnC"/>
+                            <constraint firstItem="t0t-vH-pfw" firstAttribute="top" secondItem="NPj-Y0-O89" secondAttribute="bottom" constant="8" id="o0v-h4-MfQ"/>
                             <constraint firstItem="HqB-Yw-GRX" firstAttribute="top" secondItem="nAG-fa-j7H" secondAttribute="bottom" constant="24" id="zvM-qz-dvO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ui_infoLabel" destination="t0t-vH-pfw" id="hmC-fk-Agg"/>
                         <outlet property="ui_preview" destination="nAG-fa-j7H" id="DfD-oR-Hg6"/>
+                        <outlet property="ui_titleLabel" destination="NPj-Y0-O89" id="IwE-gH-Get"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
