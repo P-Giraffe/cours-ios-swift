@@ -30,10 +30,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
               let bestGuess = observations.first else {
             return
         }
+        var finalIdentifier = bestGuess.identifier
+        let commaIndex = finalIdentifier.index(of: ",") ?? finalIdentifier.endIndex
+        finalIdentifier = String(finalIdentifier[..<commaIndex])
         
         DispatchQueue.main.async {
             if bestGuess.confidence > 0.6 {
-                self.ui_titleLabel.text = bestGuess.identifier
+                self.ui_titleLabel.text = finalIdentifier
                 self.ui_infoLabel.text = "Probabilité : \(bestGuess.confidence)"
             } else {
                 self.ui_infoLabel.text = "Recherche en cours..."
