@@ -31,8 +31,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             return
         }
         var finalIdentifier = bestGuess.identifier
-        let commaIndex = finalIdentifier.index(of: ",") ?? finalIdentifier.endIndex
-        finalIdentifier = String(finalIdentifier[..<commaIndex])
+        if finalIdentifier.contains("hotdog") {
+            finalIdentifier = "!! 🌭 !!"
+        } else {
+            let commaIndex = finalIdentifier.index(of: ",") ?? finalIdentifier.endIndex
+            finalIdentifier = finalIdentifier[..<commaIndex] + " (not a 🌭)"
+        }
         
         DispatchQueue.main.async {
             if bestGuess.confidence > 0.6 {
