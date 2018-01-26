@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     @IBOutlet weak var ui_preview: UIView!
     let captureSession = AVCaptureSession()
 
@@ -31,9 +31,13 @@ class ViewController: UIViewController {
         
         // 2 - Configurer les sorties
         let outputFeed = AVCaptureVideoDataOutput()
+        outputFeed.setSampleBufferDelegate(self, queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated))
         captureSession.addOutput(outputFeed)
         
         // 3 - Configurer l'apercu
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = ui_preview.bounds
+        ui_preview.layer.addSublayer(previewLayer)
         
         // 4 - Demarrer la session
     }
@@ -43,6 +47,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+    }
 }
 
