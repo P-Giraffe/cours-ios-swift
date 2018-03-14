@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import GEOSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var ui_map: MKMapView!
@@ -20,8 +21,11 @@ class ViewController: UIViewController {
     }
 
     func downloadPointsOfInterest() {
-        if let url = URL(string:"http://opendata.agglopole.fr/webservice/carto/17") {
-            
+        if let url = URL(string:"http://opendata.agglopole.fr/webservice/carto/17"),
+            let features = try! Features.fromGeoJSON(url) {
+            for feature in features {
+                print(feature.properties?["nom"])
+            }
         }
     }
 }
