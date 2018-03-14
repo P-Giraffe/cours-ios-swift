@@ -1,0 +1,12 @@
+project 'Busbus.xcodeproj'
+source 'https://github.com/mojtabacazi/Specs.git'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Busbus' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Busbus
+  pod 'GEOSwift', :git => 'https://github.com/mojtabacazi/GEOSwift.git', :branch => 'develop'
+end
