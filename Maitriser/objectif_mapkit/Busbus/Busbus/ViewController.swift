@@ -18,6 +18,12 @@ class ViewController: UIViewController {
         ui_map.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.4012, longitude: 3.6767), span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25)), animated: false)
         
         downloadPointsOfInterest()
+        
+        let poi = MKPointAnnotation()
+        poi.coordinate = CLLocationCoordinate2D(latitude: 43.4012, longitude: 3.6767)
+        poi.title = "Sète"
+        poi.subtitle = "La plus belle ville"
+        ui_map.addAnnotation(poi)
     }
 
     func downloadPointsOfInterest() {
