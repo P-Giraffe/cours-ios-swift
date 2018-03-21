@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C91B16F695FB569B91B774D1 /* Pods_Busbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79286BB2E0FA21E2BFA4232B /* Pods_Busbus.framework */; };
+		F8A76EF720626A0D00330CE7 /* BusStopAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A76EF620626A0D00330CE7 /* BusStopAnnotationView.swift */; };
 		F8C28381205972400050C998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C28380205972400050C998 /* AppDelegate.swift */; };
 		F8C28383205972400050C998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C28382205972400050C998 /* ViewController.swift */; };
 		F8C28386205972400050C998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C28384205972400050C998 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		6F507174E127DFDC3AC9E4E4 /* Pods-Busbus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busbus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Busbus/Pods-Busbus.release.xcconfig"; sourceTree = "<group>"; };
 		79286BB2E0FA21E2BFA4232B /* Pods_Busbus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Busbus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E363665C769CA459D33FF9 /* Pods-Busbus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busbus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Busbus/Pods-Busbus.debug.xcconfig"; sourceTree = "<group>"; };
+		F8A76EF620626A0D00330CE7 /* BusStopAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopAnnotationView.swift; sourceTree = "<group>"; };
 		F8C2837D205972400050C998 /* Busbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Busbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C28380205972400050C998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8C28382205972400050C998 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				F8C28387205972400050C998 /* Assets.xcassets */,
 				F8C28389205972400050C998 /* LaunchScreen.storyboard */,
 				F8C2838C205972400050C998 /* Info.plist */,
+				F8A76EF620626A0D00330CE7 /* BusStopAnnotationView.swift */,
 			);
 			path = Busbus;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C28383205972400050C998 /* ViewController.swift in Sources */,
+				F8A76EF720626A0D00330CE7 /* BusStopAnnotationView.swift in Sources */,
 				F8C28381205972400050C998 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
