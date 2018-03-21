@@ -7,6 +7,7 @@
 //
 
 import MapKit
+import GEOSwift
 
 class BusStop: MKPointAnnotation {
     enum StopType : String {
@@ -15,4 +16,19 @@ class BusStop: MKPointAnnotation {
     }
     
     let stopType:StopType
+    
+    init?(feature:Feature) {
+        guard let point = feature.geometries?.first as? Waypoint,
+            let properties = feature.properties,
+            let name = properties["nom"] as? String,
+            let lines = properties["lignes"] as? String,
+            let typeStr = properties["mobilier"] as? String,
+            let type = StopType(rawValue: typeStr)
+            else { return nil }
+        stopType = type
+        super.init()
+        self.title = name
+        self.subtitle = lines
+        self.coordinate = CLLocationCoordinate2DFromCoordinate(point.coordinate)
+    }
 }

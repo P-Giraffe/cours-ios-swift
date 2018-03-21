@@ -20,18 +20,20 @@ class ViewController: UIViewController {
         
         downloadPointsOfInterest()
         
-        let poi = MKPointAnnotation()
-        poi.coordinate = CLLocationCoordinate2D(latitude: 43.4012, longitude: 3.6767)
-        poi.title = "Sète"
-        poi.subtitle = "La plus belle ville"
-        ui_map.addAnnotation(poi)
+//        let poi = MKPointAnnotation()
+//        poi.coordinate = CLLocationCoordinate2D(latitude: 43.4012, longitude: 3.6767)
+//        poi.title = "Sète"
+//        poi.subtitle = "La plus belle ville"
+//        ui_map.addAnnotation(poi)
     }
 
     func downloadPointsOfInterest() {
         if let url = URL(string:"http://opendata.agglopole.fr/webservice/carto/17"),
             let features = try! Features.fromGeoJSON(url) {
             for feature in features {
-                print(feature.properties?["nom"])
+                if let busStop = BusStop(feature: feature) {
+                    ui_map.addAnnotation(busStop)
+                }
             }
         }
     }
