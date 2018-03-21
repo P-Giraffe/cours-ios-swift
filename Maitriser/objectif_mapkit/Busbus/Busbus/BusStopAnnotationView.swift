@@ -12,7 +12,7 @@ class BusStopAnnotationView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
             if let busStop = newValue as? BusStop {
-                clusteringIdentifier = busStop.stopType.rawValue
+                clusteringIdentifier = "BusStop"
                 switch busStop.stopType {
                 case .shelter:
                     markerTintColor = UIColor.orange

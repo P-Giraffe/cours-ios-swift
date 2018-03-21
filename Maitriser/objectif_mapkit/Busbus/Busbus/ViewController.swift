@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ui_map.register(BusStopAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        ui_map.register(BusStopClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+        
         ui_map.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.4012, longitude: 3.6767), span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25)), animated: false)
         
         downloadPointsOfInterest()
