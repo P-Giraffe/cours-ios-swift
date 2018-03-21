@@ -11,7 +11,17 @@ import MapKit
 class BusStopAnnotationView: MKMarkerAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
-            markerTintColor = UIColor.green
+            if let busStop = newValue as? BusStop {
+                switch busStop.stopType {
+                case .shelter:
+                    markerTintColor = UIColor.orange
+                    glyphText = "A"
+                    glyphTintColor = UIColor.white
+                case .post:
+                    markerTintColor = UIColor.purple
+                    glyphText = "🚏"
+                }
+            }
         }
     }
 
