@@ -20,6 +20,7 @@
  * [Singleton](Singleton)
  * [Fonctions mathématiques](Maths)
  * [Propriétés Lazy](Lazy)
+ * [Enumérations](Enum)
  * [Intervalles (Rangel)](Intervalles)
  */
 
