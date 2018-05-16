@@ -19,6 +19,10 @@ class WelcomeViewController: UIViewController {
         let userCredentials = SyncCredentials.nickname(nickname)
         let url = URL(string:"https://safetyfirst.us1.cloud.realm.io/")!
         SyncUser.logIn(with: userCredentials, server: url) { (user, _) in
+            if let user = user {
+                let realmUrl = URL(string:"realms://safetyfirst.us1.cloud.realm.io/~/vault")!
+                let syncConfig = SyncConfiguration(user: user, realmURL: realmUrl)
+            }
             self.ui_loginActivityIndicator.isHidden = true
         }
         ui_loginActivityIndicator.isHidden = false
