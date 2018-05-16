@@ -12,6 +12,9 @@ import RealmSwift
 class CredentialsManager {
     private let _realm:Realm
     private let _credentialList:Results<Credentials>
+    public var credentialList:Results<Credentials> {
+        return _credentialList
+    }
     
     init() {
         _realm = try! Realm()

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CredentialListViewController: UITableViewController {
     private let _credentialsManager = CredentialsManager()
+    private var _notificationToken:NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,14 @@ class CredentialListViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _notificationToken?.invalidate()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        notificationToken = items.observe { [weak self] (changes) in
+        _notificationToken = _credentialsManager.credentialList.observe { [weak self] (changes) in
             guard let tableView = self?.tableView else { return }
             switch changes {
             case .initial:
@@ -48,9 +55,7 @@ class CredentialListViewController: UITableViewController {
     }
     
     @IBAction func unwindToCredentialList(segue:UIStoryboardSegue) {
-        if segue.identifier == "saveAndReturnToListSegue" {
-            self.tableView.reloadData()
-        }
+
     }
 
     override func didReceiveMemoryWarning() {
