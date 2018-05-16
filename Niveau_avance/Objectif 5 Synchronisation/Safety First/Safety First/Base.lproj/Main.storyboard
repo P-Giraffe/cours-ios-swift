@@ -334,7 +334,7 @@
                                     <action selector="loginButtonTouched" destination="sve-xc-SGn" eventType="touchUpInside" id="d4h-Nu-g57"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-wA-0So">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-wA-0So">
                                 <rect key="frame" x="150" y="167" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>

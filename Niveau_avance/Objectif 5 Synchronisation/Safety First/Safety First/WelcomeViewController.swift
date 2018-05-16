@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var ui_nicknameField: UITextField!
@@ -14,6 +15,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var ui_loginActivityIndicator: UIActivityIndicatorView!
     
     @IBAction func loginButtonTouched() {
+        guard let nickname = ui_nicknameField.text, nickname.count > 0 else { return }
+        let userCredentials = SyncCredentials.nickname(nickname)
+        let url = URL(string:"https://safetyfirst.us1.cloud.realm.io/")!
+        SyncUser.logIn(with: userCredentials, server: url) { (user, _) in
+            self.ui_loginActivityIndicator.isHidden = true
+        }
+        ui_loginActivityIndicator.isHidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
