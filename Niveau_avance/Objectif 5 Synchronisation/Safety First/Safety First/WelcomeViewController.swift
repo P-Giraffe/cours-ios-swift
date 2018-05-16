@@ -22,6 +22,9 @@ class WelcomeViewController: UIViewController {
             if let user = user {
                 let realmUrl = URL(string:"realms://safetyfirst.us1.cloud.realm.io/~/vault")!
                 let syncConfig = SyncConfiguration(user: user, realmURL: realmUrl)
+                let realmConfig = Realm.Configuration(syncConfiguration: syncConfig)
+                Realm.Configuration.defaultConfiguration = realmConfig
+                self.performSegue(withIdentifier: "open-vault", sender: nil)
             }
             self.ui_loginActivityIndicator.isHidden = true
         }
